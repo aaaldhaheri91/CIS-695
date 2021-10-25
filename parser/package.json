@@ -9,7 +9,9 @@
   "author": "Ahmed Aldhaheri",
   "license": "ISC",
   "dependencies": {
+    "event-stream": "^4.0.1",
     "extract-json-from-string": "^1.0.1",
+    "fs": "^0.0.1-security",
     "util": "^0.12.4"
   }
 }
