@@ -1,0 +1,6 @@
+d42f2987a1b91e368c604ab52eefa5655e16ea34391211fca5eed9abdfbbeaf2
+63dec82bf55cc5f3c9ad7f16fc8eaeef
+
+openssl enc -aes-256-cbc -nosalt -d \
+        -in secrets.txt \
+        -K 'd42f2987a1b91e368c604ab52eefa5655e16ea34391211fca5eed9abdfbbeaf2' -iv '63dec82bf55cc5f3c9ad7f16fc8eaeef'
