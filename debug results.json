@@ -1,0 +1,374 @@
+
+Ran this command:
+node bw.js get template item | jq ".name=\"local\" | .login=$(node bw.js get template item.login | jq '.username="moe" | .password="Rounds2021"')" | node bw.js encode | node bw.js create item
+
+Findings to decrypt above password from debug statements below:
+iv: 58 22 a2 2d 83 1b 02 b7 07 c2 8d 80 1d b4 35 73
+data: 1lTVLMWDJcB2AuUTBO8NHw==
+key: 0d f9 d3 a7 f6 3f 72 3d b7 64 18 84 2c f0 04 d4 6c e0 9f bb 18 1b cb c8 21 d8 4d 15 75 26 32 22
+
+
+inside encrypt!!!
+
+
+
+data:  ArrayBuffer {
+  [Uint8Contents]: <c2 5c 46 85 fa c9 cc c4 7d a2 95 af d1 fa a8 02 93 58 73 fe 51 a4 0a f7 bd 55 f4 33 87 61 7f c7>,
+  byteLength: 32
+}
+iv:  ArrayBuffer {
+  [Uint8Contents]: <02 87 99 aa 2c 39 71 8e 0d 31 c7 bc 1a 55 5b 95>,
+  byteLength: 16
+}
+key:  ArrayBuffer {
+  [Uint8Contents]: <63 3e 65 8f f2 a9 f4 46 28 a5 74 37 6c 31 a6 b6 e9 d0 bb a4 a1 99 15 84 25 bb 05 67 09 62 00 b9>,
+  byteLength: 32
+}
+create item switch statement
+
+
+
+ inside encrypt!!!
+
+
+
+data:  ArrayBuffer {
+  [Uint8Contents]: <53 6f 6d 65 20 6e 6f 74 65 73 20 61 62 6f 75 74 20 74 68 69 73 20 69 74 65 6d 2e>,
+  byteLength: 27
+}
+iv:  ArrayBuffer {
+  [Uint8Contents]: <ca 41 e6 0b fd 38 e3 29 1a 44 20 a4 ef 64 b4 62>,
+  byteLength: 16
+}
+key:  ArrayBuffer {
+  [Uint8Contents]: <0d f9 d3 a7 f6 3f 72 3d b7 64 18 84 2c f0 04 d4 6c e0 9f bb 18 1b cb c8 21 d8 4d 15 75 26 32 22>,
+  byteLength: 32
+}
+
+
+
+ inside encrypt!!!
+
+
+
+data:  ArrayBuffer { [Uint8Contents]: <6c 6f 63 61 6c>, byteLength: 5 }
+iv:  ArrayBuffer {
+  [Uint8Contents]: <1e 41 85 bc 19 44 52 0d d4 0a ca 7e 34 47 3b 92>,
+  byteLength: 16
+}
+key:  ArrayBuffer {
+  [Uint8Contents]: <0d f9 d3 a7 f6 3f 72 3d b7 64 18 84 2c f0 04 d4 6c e0 9f bb 18 1b cb c8 21 d8 4d 15 75 26 32 22>,
+  byteLength: 32
+}
+
+
+
+ inside encrypt!!!
+
+
+
+data:  ArrayBuffer { [Uint8Contents]: <6d 6f 65>, byteLength: 3 }
+iv:  ArrayBuffer {
+  [Uint8Contents]: <14 ee 8c e9 d2 09 21 4a e0 9d de 3a f8 76 58 11>,
+  byteLength: 16
+}
+key:  ArrayBuffer {
+  [Uint8Contents]: <0d f9 d3 a7 f6 3f 72 3d b7 64 18 84 2c f0 04 d4 6c e0 9f bb 18 1b cb c8 21 d8 4d 15 75 26 32 22>,
+  byteLength: 32
+}
+
+
+
+ inside encrypt!!!
+
+
+
+data:  ArrayBuffer {
+  [Uint8Contents]: <52 6f 75 6e 64 73 32 30 32 31>,
+  byteLength: 10
+}
+iv:  ArrayBuffer {
+  [Uint8Contents]: <58 22 a2 2d 83 1b 02 b7 07 c2 8d 80 1d b4 35 73>,
+  byteLength: 16
+}
+key:  ArrayBuffer {
+  [Uint8Contents]: <0d f9 d3 a7 f6 3f 72 3d b7 64 18 84 2c f0 04 d4 6c e0 9f bb 18 1b cb c8 21 d8 4d 15 75 26 32 22>,
+  byteLength: 32
+}
+
+
+
+ inside encrypt!!!
+
+
+
+data:  ArrayBuffer {
+  [Uint8Contents]: <4a 42 53 57 59 33 44 50 45 48 50 4b 33 50 58 50>,
+  byteLength: 16
+}
+iv:  ArrayBuffer {
+  [Uint8Contents]: <89 ab 43 2c 8e a7 3f 27 fe b4 ab 77 fc b1 fb fc>,
+  byteLength: 16
+}
+key:  ArrayBuffer {
+  [Uint8Contents]: <0d f9 d3 a7 f6 3f 72 3d b7 64 18 84 2c f0 04 d4 6c e0 9f bb 18 1b cb c8 21 d8 4d 15 75 26 32 22>,
+  byteLength: 32
+}
+cipher:  Cipher {
+  id: 'dd869105-7e51-42a0-bb6e-adcd00201d3e',
+  userId: '14d4a0bc-763c-436f-8e28-adb6014610f8',
+  organizationId: null,
+  folderId: null,
+  name: EncString {
+    encryptedString: '2.HkGFvBlEUg3UCsp+NEc7kg==|BMWRucepxzgEpyw+UrsUpA==|oD9eQePBJWepav2KUuTGELQvvy3kjzUyx/NY10nL1+c=',
+    encryptionType: 2,
+    iv: 'HkGFvBlEUg3UCsp+NEc7kg==',
+    data: 'BMWRucepxzgEpyw+UrsUpA==',
+    mac: 'oD9eQePBJWepav2KUuTGELQvvy3kjzUyx/NY10nL1+c='
+  },
+  notes: EncString {
+    encryptedString: '2.ykHmC/044ykaRCCk72S0Yg==|gEkKkL8TdcCq/ZgkVGeQM4ck5mGRUPijY3T2lv5blvk=|tLdKId6BFE5ePL0/MGeEX6VXxmZJk0NvWNk1KzXrvoM=',
+    encryptionType: 2,
+    iv: 'ykHmC/044ykaRCCk72S0Yg==',
+    data: 'gEkKkL8TdcCq/ZgkVGeQM4ck5mGRUPijY3T2lv5blvk=',
+    mac: 'tLdKId6BFE5ePL0/MGeEX6VXxmZJk0NvWNk1KzXrvoM='
+  },
+  type: 1,
+  favorite: false,
+  organizationUseTotp: false,
+  edit: true,
+  viewPassword: true,
+  revisionDate: 2021-10-26T01:56:55.460Z,
+  collectionIds: undefined,
+  localData: null,
+  deletedDate: null,
+  reprompt: 0,
+  login: Login {
+    passwordRevisionDate: null,
+    autofillOnPageLoad: null,
+    username: EncString {
+      encryptedString: '2.FO6M6dIJIUrgnd46+HZYEQ==|fXZUC2Sd9469PvT22i8+UQ==|t1gqIetKUt18SZ8Pbgr+Y6Ds4eepXb7sEVUnnjzpBIo=',
+      encryptionType: 2,
+      iv: 'FO6M6dIJIUrgnd46+HZYEQ==',
+      data: 'fXZUC2Sd9469PvT22i8+UQ==',
+      mac: 't1gqIetKUt18SZ8Pbgr+Y6Ds4eepXb7sEVUnnjzpBIo='
+    },
+    password: EncString {
+      encryptedString: '2.WCKiLYMbArcHwo2AHbQ1cw==|1lTVLMWDJcB2AuUTBO8NHw==|AAbtIaw3AoowRa9vFQBPqczImtBLvYQX9qb288xt8mE=',
+      encryptionType: 2,
+      iv: 'WCKiLYMbArcHwo2AHbQ1cw==',
+      data: '1lTVLMWDJcB2AuUTBO8NHw==',
+      mac: 'AAbtIaw3AoowRa9vFQBPqczImtBLvYQX9qb288xt8mE='
+    },
+    totp: EncString {
+      encryptedString: '2.iatDLI6nPyf+tKt3/LH7/A==|3BuYb/3qu5gjNfUpb0zFjgIFik/krM3YGj0eP+Yu6Qw=|kS6BStSQ/8/morpJ/0jMoQEg8Agyp4fRoVe6VwZPw9w=',
+      encryptionType: 2,
+      iv: 'iatDLI6nPyf+tKt3/LH7/A==',
+      data: '3BuYb/3qu5gjNfUpb0zFjgIFik/krM3YGj0eP+Yu6Qw=',
+      mac: 'kS6BStSQ/8/morpJ/0jMoQEg8Agyp4fRoVe6VwZPw9w='
+    },
+    uris: []
+  },
+  attachments: null,
+  fields: null,
+  passwordHistory: null
+}
+
+
+
+ inside decrypt paramters
+
+
+
+data:  BMWRucepxzgEpyw+UrsUpA==
+iv:  HkGFvBlEUg3UCsp+NEc7kg==
+mac:  oD9eQePBJWepav2KUuTGELQvvy3kjzUyx/NY10nL1+c=
+key:  SymmetricCryptoKey {
+  key: ArrayBuffer {
+    [Uint8Contents]: <0d f9 d3 a7 f6 3f 72 3d b7 64 18 84 2c f0 04 d4 6c e0 9f bb 18 1b cb c8 21 d8 4d 15 75 26 32 22 23 01 aa 8f 99 7e 5c d8 78 57 ed 70 6e 61 75 46 88 61 60 0c 97 ea a4 ad 76 cb 9b 3a f6 b6 fc d9>,
+    byteLength: 64
+  },
+  encType: 2,
+  encKey: ArrayBuffer {
+    [Uint8Contents]: <0d f9 d3 a7 f6 3f 72 3d b7 64 18 84 2c f0 04 d4 6c e0 9f bb 18 1b cb c8 21 d8 4d 15 75 26 32 22>,
+    byteLength: 32
+  },
+  macKey: ArrayBuffer {
+    [Uint8Contents]: <23 01 aa 8f 99 7e 5c d8 78 57 ed 70 6e 61 75 46 88 61 60 0c 97 ea a4 ad 76 cb 9b 3a f6 b6 fc d9>,
+    byteLength: 32
+  },
+  keyB64: 'DfnTp/Y/cj23ZBiELPAE1Gzgn7sYG8vIIdhNFXUmMiIjAaqPmX5c2HhX7XBuYXVGiGFgDJfqpK12y5s69rb82Q==',
+  encKeyB64: 'DfnTp/Y/cj23ZBiELPAE1Gzgn7sYG8vIIdhNFXUmMiI=',
+  macKeyB64: 'IwGqj5l+XNh4V+1wbmF1RohhYAyX6qStdsubOva2/Nk='
+}
+
+
+
+ inside decrypt paramters
+
+
+
+data:  gEkKkL8TdcCq/ZgkVGeQM4ck5mGRUPijY3T2lv5blvk=
+iv:  ykHmC/044ykaRCCk72S0Yg==
+mac:  tLdKId6BFE5ePL0/MGeEX6VXxmZJk0NvWNk1KzXrvoM=
+key:  SymmetricCryptoKey {
+  key: ArrayBuffer {
+    [Uint8Contents]: <0d f9 d3 a7 f6 3f 72 3d b7 64 18 84 2c f0 04 d4 6c e0 9f bb 18 1b cb c8 21 d8 4d 15 75 26 32 22 23 01 aa 8f 99 7e 5c d8 78 57 ed 70 6e 61 75 46 88 61 60 0c 97 ea a4 ad 76 cb 9b 3a f6 b6 fc d9>,
+    byteLength: 64
+  },
+  encType: 2,
+  encKey: ArrayBuffer {
+    [Uint8Contents]: <0d f9 d3 a7 f6 3f 72 3d b7 64 18 84 2c f0 04 d4 6c e0 9f bb 18 1b cb c8 21 d8 4d 15 75 26 32 22>,
+    byteLength: 32
+  },
+  macKey: ArrayBuffer {
+    [Uint8Contents]: <23 01 aa 8f 99 7e 5c d8 78 57 ed 70 6e 61 75 46 88 61 60 0c 97 ea a4 ad 76 cb 9b 3a f6 b6 fc d9>,
+    byteLength: 32
+  },
+  keyB64: 'DfnTp/Y/cj23ZBiELPAE1Gzgn7sYG8vIIdhNFXUmMiIjAaqPmX5c2HhX7XBuYXVGiGFgDJfqpK12y5s69rb82Q==',
+  encKeyB64: 'DfnTp/Y/cj23ZBiELPAE1Gzgn7sYG8vIIdhNFXUmMiI=',
+  macKeyB64: 'IwGqj5l+XNh4V+1wbmF1RohhYAyX6qStdsubOva2/Nk='
+}
+
+
+
+ inside decrypt paramters
+
+
+
+data:  fXZUC2Sd9469PvT22i8+UQ==
+iv:  FO6M6dIJIUrgnd46+HZYEQ==
+mac:  t1gqIetKUt18SZ8Pbgr+Y6Ds4eepXb7sEVUnnjzpBIo=
+key:  SymmetricCryptoKey {
+  key: ArrayBuffer {
+    [Uint8Contents]: <0d f9 d3 a7 f6 3f 72 3d b7 64 18 84 2c f0 04 d4 6c e0 9f bb 18 1b cb c8 21 d8 4d 15 75 26 32 22 23 01 aa 8f 99 7e 5c d8 78 57 ed 70 6e 61 75 46 88 61 60 0c 97 ea a4 ad 76 cb 9b 3a f6 b6 fc d9>,
+    byteLength: 64
+  },
+  encType: 2,
+  encKey: ArrayBuffer {
+    [Uint8Contents]: <0d f9 d3 a7 f6 3f 72 3d b7 64 18 84 2c f0 04 d4 6c e0 9f bb 18 1b cb c8 21 d8 4d 15 75 26 32 22>,
+    byteLength: 32
+  },
+  macKey: ArrayBuffer {
+    [Uint8Contents]: <23 01 aa 8f 99 7e 5c d8 78 57 ed 70 6e 61 75 46 88 61 60 0c 97 ea a4 ad 76 cb 9b 3a f6 b6 fc d9>,
+    byteLength: 32
+  },
+  keyB64: 'DfnTp/Y/cj23ZBiELPAE1Gzgn7sYG8vIIdhNFXUmMiIjAaqPmX5c2HhX7XBuYXVGiGFgDJfqpK12y5s69rb82Q==',
+  encKeyB64: 'DfnTp/Y/cj23ZBiELPAE1Gzgn7sYG8vIIdhNFXUmMiI=',
+  macKeyB64: 'IwGqj5l+XNh4V+1wbmF1RohhYAyX6qStdsubOva2/Nk='
+}
+
+
+
+ inside decrypt paramters
+
+
+
+data:  1lTVLMWDJcB2AuUTBO8NHw==
+iv:  WCKiLYMbArcHwo2AHbQ1cw==
+mac:  AAbtIaw3AoowRa9vFQBPqczImtBLvYQX9qb288xt8mE=
+key:  SymmetricCryptoKey {
+  key: ArrayBuffer {
+    [Uint8Contents]: <0d f9 d3 a7 f6 3f 72 3d b7 64 18 84 2c f0 04 d4 6c e0 9f bb 18 1b cb c8 21 d8 4d 15 75 26 32 22 23 01 aa 8f 99 7e 5c d8 78 57 ed 70 6e 61 75 46 88 61 60 0c 97 ea a4 ad 76 cb 9b 3a f6 b6 fc d9>,
+    byteLength: 64
+  },
+  encType: 2,
+  encKey: ArrayBuffer {
+    [Uint8Contents]: <0d f9 d3 a7 f6 3f 72 3d b7 64 18 84 2c f0 04 d4 6c e0 9f bb 18 1b cb c8 21 d8 4d 15 75 26 32 22>,
+    byteLength: 32
+  },
+  macKey: ArrayBuffer {
+    [Uint8Contents]: <23 01 aa 8f 99 7e 5c d8 78 57 ed 70 6e 61 75 46 88 61 60 0c 97 ea a4 ad 76 cb 9b 3a f6 b6 fc d9>,
+    byteLength: 32
+  },
+  keyB64: 'DfnTp/Y/cj23ZBiELPAE1Gzgn7sYG8vIIdhNFXUmMiIjAaqPmX5c2HhX7XBuYXVGiGFgDJfqpK12y5s69rb82Q==',
+  encKeyB64: 'DfnTp/Y/cj23ZBiELPAE1Gzgn7sYG8vIIdhNFXUmMiI=',
+  macKeyB64: 'IwGqj5l+XNh4V+1wbmF1RohhYAyX6qStdsubOva2/Nk='
+}
+
+
+
+ inside decrypt paramters
+
+
+
+data:  3BuYb/3qu5gjNfUpb0zFjgIFik/krM3YGj0eP+Yu6Qw=
+iv:  iatDLI6nPyf+tKt3/LH7/A==
+mac:  kS6BStSQ/8/morpJ/0jMoQEg8Agyp4fRoVe6VwZPw9w=
+key:  SymmetricCryptoKey {
+  key: ArrayBuffer {
+    [Uint8Contents]: <0d f9 d3 a7 f6 3f 72 3d b7 64 18 84 2c f0 04 d4 6c e0 9f bb 18 1b cb c8 21 d8 4d 15 75 26 32 22 23 01 aa 8f 99 7e 5c d8 78 57 ed 70 6e 61 75 46 88 61 60 0c 97 ea a4 ad 76 cb 9b 3a f6 b6 fc d9>,
+    byteLength: 64
+  },
+  encType: 2,
+  encKey: ArrayBuffer {
+    [Uint8Contents]: <0d f9 d3 a7 f6 3f 72 3d b7 64 18 84 2c f0 04 d4 6c e0 9f bb 18 1b cb c8 21 d8 4d 15 75 26 32 22>,
+    byteLength: 32
+  },
+  macKey: ArrayBuffer {
+    [Uint8Contents]: <23 01 aa 8f 99 7e 5c d8 78 57 ed 70 6e 61 75 46 88 61 60 0c 97 ea a4 ad 76 cb 9b 3a f6 b6 fc d9>,
+    byteLength: 32
+  },
+  keyB64: 'DfnTp/Y/cj23ZBiELPAE1Gzgn7sYG8vIIdhNFXUmMiIjAaqPmX5c2HhX7XBuYXVGiGFgDJfqpK12y5s69rb82Q==',
+  encKeyB64: 'DfnTp/Y/cj23ZBiELPAE1Gzgn7sYG8vIIdhNFXUmMiI=',
+  macKeyB64: 'IwGqj5l+XNh4V+1wbmF1RohhYAyX6qStdsubOva2/Nk='
+}
+decipher:  CipherView {
+  id: 'dd869105-7e51-42a0-bb6e-adcd00201d3e',
+  organizationId: null,
+  folderId: null,
+  name: 'local',
+  notes: 'Some notes about this item.',
+  type: 1,
+  favorite: false,
+  organizationUseTotp: false,
+  edit: true,
+  viewPassword: true,
+  login: LoginView {
+    username: 'moe',
+    password: 'Rounds2021',
+    passwordRevisionDate: null,
+    totp: 'JBSWY3DPEHPK3PXP',
+    uris: [],
+    autofillOnPageLoad: null
+  },
+  identity: IdentityView {
+    title: null,
+    middleName: null,
+    address1: null,
+    address2: null,
+    address3: null,
+    city: null,
+    state: null,
+    postalCode: null,
+    country: null,
+    company: null,
+    email: null,
+    phone: null,
+    ssn: null,
+    username: null,
+    passportNumber: null,
+    licenseNumber: null,
+    _firstName: null,
+    _lastName: null,
+    _subTitle: null
+  },
+  card: CardView {
+    cardholderName: null,
+    expMonth: null,
+    expYear: null,
+    code: null,
+    _brand: null,
+    _number: null,
+    _subTitle: null
+  },
+  secureNote: SecureNoteView { type: null },
+  attachments: null,
+  fields: null,
+  passwordHistory: null,
+  collectionIds: undefined,
+  revisionDate: 2021-10-26T01:56:55.460Z,
+  deletedDate: null,
+  reprompt: 0,
+  localData: null
+}

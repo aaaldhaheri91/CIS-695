@@ -1,2 +1,3 @@
 parser/node_modules/**/*
 *dump*.txt
+*dump*.log

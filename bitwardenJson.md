@@ -86,6 +86,9 @@ data: 99 20 fb 27 ab 57 1d a9 63 0c 3a ce 02 d1 bd ed
 iv: 63 de c8 2b f5 5c c5 f3 c9 ad 7f 16 fc 8e ae ef
 mac: 35 45 ca 10 71 d4 a8 71 5f 2a 11 26 f0 14 1a ee 81 b2 02 f4 7d 7e a3 5a cb af 4e 5b 04 73 2f af
 ```
+```
+key: d42f2987a1b91e368c604ab52eefa5655e16ea34391211fca5eed9abdfbbeaf2
+```
 
 These are the same values if the above string parts are converted from base64 to hex. If I use openssl to decrypt with aes-256-cbc using the above values, I am
 able to retrieve the original password (hunter2). However, I was not able to retrieve the key from my SMI search technique. It appears BitWarden is using the
