@@ -1,0 +1,671 @@
+ =========================================
+email:  undefined
+password:  undefined
+options:  {}
+
+ ==========================================
+
+? Email address: aaldhahe@umich.edu
+? Master password: [hidden]
+inside else statement, password:  Cis_695_testing email:  aaldhahe@umich.edu
+
+
+-------------------------------------------------------------------
+
+Crypto Service makeKey
+password: Cis_695_testing, salt: aaldhahe@umich.edu, kdf:  0  kdfIterations 100000
+key:  ArrayBuffer {
+  [Uint8Contents]: <c2 5c 46 85 fa c9 cc c4 7d a2 95 af d1 fa a8 02 93 58 73 fe 51 a4 0a f7 bd 55 f4 33 87 61 7f c7>,
+  byteLength: 32
+}
+
+----------------------------------------------------------------------
+
+---------------------------------------------------------
+ Auth.Service (logIn)
+key:  SymmetricCryptoKey {
+  key: ArrayBuffer {
+    [Uint8Contents]: <c2 5c 46 85 fa c9 cc c4 7d a2 95 af d1 fa a8 02 93 58 73 fe 51 a4 0a f7 bd 55 f4 33 87 61 7f c7>,
+    byteLength: 32
+  },
+  encType: 0,
+  encKey: ArrayBuffer {
+    [Uint8Contents]: <c2 5c 46 85 fa c9 cc c4 7d a2 95 af d1 fa a8 02 93 58 73 fe 51 a4 0a f7 bd 55 f4 33 87 61 7f c7>,
+    byteLength: 32
+  },
+  macKey: null,
+  keyB64: 'wlxGhfrJzMR9opWv0fqoApNYc/5RpAr3vVX0M4dhf8c=',
+  encKeyB64: 'wlxGhfrJzMR9opWv0fqoApNYc/5RpAr3vVX0M4dhf8c='
+}
+hashedPassword:  8ieCch0DKSJ/YYLt4F458ClboFStMcufdqFsnB07paU=
+localHashedPassword:  q1fyPCADGO19Uyuoc9GOAqy2XY2tUcbZ1q/Zl1ehLWU=
+
+
+=================================================
+loginHelper first
+result before token service:  AuthResult {
+  twoFactor: false,
+  captchaSiteKey: undefined,
+  resetMasterPassword: false,
+  twoFactorProviders: null
+}
+Successfully wrote accessToken to db & value:  eyJhbGciOiJSUzI1NiIsImtpZCI6IkJDMzZDMjE0REI0OEYyMzVCNzdEQTNGMTcyMEMxQTM1QTk2MkVBNDNSUzI1NiIsInR5cCI6ImF0K2p3dCIsIng1dCI6InZEYkNGTnRJOGpXM2ZhUHhjZ3dhTmFsaTZrTSJ9.eyJuYmYiOjE2MzU3MjA5MzAsImV4cCI6MTYzNTcyNDUzMCwiaXNzIjoiaHR0cHM6Ly9pZGVudGl0eS5iaXR3YXJkZW4uY29tIiwiY2xpZW50X2lkIjoiY2xpIiwic3ViIjoiMTRkNGEwYmMtNzYzYy00MzZmLThlMjgtYWRiNjAxNDYxMGY4IiwiYXV0aF90aW1lIjoxNjM1NzIwOTMwLCJpZHAiOiJiaXR3YXJkZW4iLCJwcmVtaXVtIjpmYWxzZSwiZW1haWwiOiJhYWxkaGFoZUB1bWljaC5lZHUiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwic3N0YW1wIjoiYjE0YjFhMDEtZmU0MC00M2RlLTllZWQtYmU5Yjg5MWU3MGNkIiwibmFtZSI6IkFobWVkIEFiZHVsc2FsYW0gQWxkaGFoZXJpIiwiZGV2aWNlIjoiMjk4NjAzNjMtOWU4Ni00NWUyLWJjY2MtOTVlZjkwY2IxZjg5IiwianRpIjoiNEFBRTg4Q0I3QkE2RjIwMzQ0QkU5QUNBMDI5MTMzMDEiLCJpYXQiOjE2MzU3MjA5MzAsInNjb3BlIjpbImFwaSIsIm9mZmxpbmVfYWNjZXNzIl0sImFtciI6WyJBcHBsaWNhdGlvbiJdfQ.GhzQpyJZke6rkpQZANhUIo4hx27vQJYiO0T-bgAvS5J0fIXKyCfAPvDJOhQGDNI3UePJQGJrcTdfaac0L3W7pVUNzi4QbAhNoOZ9w6iQYifY2Zr5mf-EXyeUu_SM4yg5XwPIifALzJ0S5z8cKNlJS_zF6P7vYGdPa_pI3gxXG5002pWBQfMX1nVzep8jkC2o5i40Xbj5o2PXLiXzvuMhI6lo-UlNcOtJ_Nr81ds9WoKr7mM98FtQ3fQE2cjXsyRnJ2jqgG2TSvt8f0K3ZGOSr6F2So81mCf3eyZacmwakJahlB4N5qDFj_Gj2AJ8TxS8EgO2L4KG-mo8RRtfjDwQXPPycEeqhDmpHe-GcoudY0zfbMMyLrTYbIF4odkjLQT09g4xFVpKtw72pNC8FGXtCZau9kLn0TVkpzezLs3Nc6hck9rGp01fCGIHaqzOMk-7HbkaoAvGln55p05gtOwjO7nmpQO_j7pmgYAYRkeWBp85TnS3M5y9qvPp5RhspqD0nlRugySlI_ljjxlst0zNx8PA0LDUNyg1G_LyW28d_UAYFFkFkGI-I8jZ2fchzcQ5vwlDzroFlljlgf7EF5Q2b3y2d22OHqqtANAnzhGXH-P3xi7_o1CjxrnKBoCmD-Mpncm5Q0tUKSB8WYOD4kKBRsfH-CrH9DAX-99OV2x2J3o
+Successfully wrote refreshToken to db & value:  6B4C6E74481AF9DF44C30D617FCC5CB8C1A91752189653804822E6D62EEFC033
+Successfully wrote userEmail to db & value:  aaldhahe@umich.edu
+Successfully wrote userId to db & value:  14d4a0bc-763c-436f-8e28-adb6014610f8
+Successfully wrote kdf to db & value:  0
+Successfully wrote kdfIterations to db & value:  100000
+before setCryptoKeys if statement
+this.setCryptoKeys if statement inside
+storeKey: Keys:  {
+  key: 'key',
+  encOrgKeys: 'encOrgKeys',
+  encProviderKeys: 'encProviderKeys',
+  encPrivateKey: 'encPrivateKey',
+  encKey: 'encKey',
+  keyHash: 'keyHash'
+}
+key:  SymmetricCryptoKey {
+  key: ArrayBuffer {
+    [Uint8Contents]: <c2 5c 46 85 fa c9 cc c4 7d a2 95 af d1 fa a8 02 93 58 73 fe 51 a4 0a f7 bd 55 f4 33 87 61 7f c7>,
+    byteLength: 32
+  },
+  encType: 0,
+  encKey: ArrayBuffer {
+    [Uint8Contents]: <c2 5c 46 85 fa c9 cc c4 7d a2 95 af d1 fa a8 02 93 58 73 fe 51 a4 0a f7 bd 55 f4 33 87 61 7f c7>,
+    byteLength: 32
+  },
+  macKey: null,
+  keyB64: 'wlxGhfrJzMR9opWv0fqoApNYc/5RpAr3vVX0M4dhf8c=',
+  encKeyB64: 'wlxGhfrJzMR9opWv0fqoApNYc/5RpAr3vVX0M4dhf8c='
+}
+Crypto Service (ecryptToBytes), plainValue:  ArrayBuffer {
+  [Uint8Contents]: <c2 5c 46 85 fa c9 cc c4 7d a2 95 af d1 fa a8 02 93 58 73 fe 51 a4 0a f7 bd 55 f4 33 87 61 7f c7>,
+  byteLength: 32
+}  key:  SymmetricCryptoKey {
+  key: ArrayBuffer {
+    [Uint8Contents]: <fb 48 33 5c fd e1 e1 07 81 db ff 71 5b f8 0b c3 d9 43 55 f8 b7 02 ae e9 94 a2 3d c4 92 43 ed 39 07 04 85 0b e2 5e c5 fc 02 78 dd 2e d8 b2 c3 e3 ae 2d 40 18 1b 4a 2f 38 0a 45 35 a2 58 af 1f 17>,
+    byteLength: 64
+  },
+  encType: 2,
+  encKey: ArrayBuffer {
+    [Uint8Contents]: <fb 48 33 5c fd e1 e1 07 81 db ff 71 5b f8 0b c3 d9 43 55 f8 b7 02 ae e9 94 a2 3d c4 92 43 ed 39>,
+    byteLength: 32
+  },
+  macKey: ArrayBuffer {
+    [Uint8Contents]: <07 04 85 0b e2 5e c5 fc 02 78 dd 2e d8 b2 c3 e3 ae 2d 40 18 1b 4a 2f 38 0a 45 35 a2 58 af 1f 17>,
+    byteLength: 32
+  },
+  keyB64: '+0gzXP3h4QeB2/9xW/gLw9lDVfi3Aq7plKI9xJJD7TkHBIUL4l7F/AJ43S7YssPjri1AGBtKLzgKRTWiWK8fFw==',
+  encKeyB64: '+0gzXP3h4QeB2/9xW/gLw9lDVfi3Aq7plKI9xJJD7Tk=',
+  macKeyB64: 'BwSFC+JexfwCeN0u2LLD464tQBgbSi84CkU1olivHxc='
+}
+Successfully wrote keyHash to db & value:  q1fyPCADGO19Uyuoc9GOAqy2XY2tUcbZ1q/Zl1ehLWU=
+after setKey & setKeyHash
+Successfully wrote encKey to db & value:  2.LGNQzSqPRoQgj4luZkP+tQ==|KPeSq7aINKM7DPjeBAy768vfl0d7Q84+P9XqK6vWCSE0Yun+2dgv5IjmEjlXnaqemJdl5ymMVtOJSXCOWdsGhY6SkSubx+b8uF49jqFv6+s=|KZGWdSfD4wOay6830S2kReti1kpzsVhn1+UIWwEEMYk=
+tokenResponse.privateKey:  IdentityTokenResponse {
+  response: {
+    access_token: 'eyJhbGciOiJSUzI1NiIsImtpZCI6IkJDMzZDMjE0REI0OEYyMzVCNzdEQTNGMTcyMEMxQTM1QTk2MkVBNDNSUzI1NiIsInR5cCI6ImF0K2p3dCIsIng1dCI6InZEYkNGTnRJOGpXM2ZhUHhjZ3dhTmFsaTZrTSJ9.eyJuYmYiOjE2MzU3MjA5MzAsImV4cCI6MTYzNTcyNDUzMCwiaXNzIjoiaHR0cHM6Ly9pZGVudGl0eS5iaXR3YXJkZW4uY29tIiwiY2xpZW50X2lkIjoiY2xpIiwic3ViIjoiMTRkNGEwYmMtNzYzYy00MzZmLThlMjgtYWRiNjAxNDYxMGY4IiwiYXV0aF90aW1lIjoxNjM1NzIwOTMwLCJpZHAiOiJiaXR3YXJkZW4iLCJwcmVtaXVtIjpmYWxzZSwiZW1haWwiOiJhYWxkaGFoZUB1bWljaC5lZHUiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwic3N0YW1wIjoiYjE0YjFhMDEtZmU0MC00M2RlLTllZWQtYmU5Yjg5MWU3MGNkIiwibmFtZSI6IkFobWVkIEFiZHVsc2FsYW0gQWxkaGFoZXJpIiwiZGV2aWNlIjoiMjk4NjAzNjMtOWU4Ni00NWUyLWJjY2MtOTVlZjkwY2IxZjg5IiwianRpIjoiNEFBRTg4Q0I3QkE2RjIwMzQ0QkU5QUNBMDI5MTMzMDEiLCJpYXQiOjE2MzU3MjA5MzAsInNjb3BlIjpbImFwaSIsIm9mZmxpbmVfYWNjZXNzIl0sImFtciI6WyJBcHBsaWNhdGlvbiJdfQ.GhzQpyJZke6rkpQZANhUIo4hx27vQJYiO0T-bgAvS5J0fIXKyCfAPvDJOhQGDNI3UePJQGJrcTdfaac0L3W7pVUNzi4QbAhNoOZ9w6iQYifY2Zr5mf-EXyeUu_SM4yg5XwPIifALzJ0S5z8cKNlJS_zF6P7vYGdPa_pI3gxXG5002pWBQfMX1nVzep8jkC2o5i40Xbj5o2PXLiXzvuMhI6lo-UlNcOtJ_Nr81ds9WoKr7mM98FtQ3fQE2cjXsyRnJ2jqgG2TSvt8f0K3ZGOSr6F2So81mCf3eyZacmwakJahlB4N5qDFj_Gj2AJ8TxS8EgO2L4KG-mo8RRtfjDwQXPPycEeqhDmpHe-GcoudY0zfbMMyLrTYbIF4odkjLQT09g4xFVpKtw72pNC8FGXtCZau9kLn0TVkpzezLs3Nc6hck9rGp01fCGIHaqzOMk-7HbkaoAvGln55p05gtOwjO7nmpQO_j7pmgYAYRkeWBp85TnS3M5y9qvPp5RhspqD0nlRugySlI_ljjxlst0zNx8PA0LDUNyg1G_LyW28d_UAYFFkFkGI-I8jZ2fchzcQ5vwlDzroFlljlgf7EF5Q2b3y2d22OHqqtANAnzhGXH-P3xi7_o1CjxrnKBoCmD-Mpncm5Q0tUKSB8WYOD4kKBRsfH-CrH9DAX-99OV2x2J3o',
+    expires_in: 3600,
+    token_type: 'Bearer',
+    refresh_token: '6B4C6E74481AF9DF44C30D617FCC5CB8C1A91752189653804822E6D62EEFC033',
+    scope: 'api offline_access',
+    PrivateKey: '2.PRPynyMwuLHhEpyAdoAnnQ==|6c7mDSD+vU7pXk93RDiv4brNNqhqldZCMG2vaFYXK4c9XYr8Gi9FWD9jjW/UzBuH8n+h1PzGfhOaEiJcfBFI9jXNoixSBV09MPXT8Y4By3CAcAveEDYCmnZPeKqh3LhsTmxjJ+GCC5QPJVwkzmzeuW0p67kbszgkMd9SFZ4mazBy35nu1c/Z2MN50QhZSiWiaM7hDEd0xfwDnjq9/hcFydciqUTs/7dDvgTujG8Liq7wQGnBzpF+xbnn43U2f3NLohqj5ugUdfUsOh1g2lwdR6ibku/vJsuQCJphAvCUB0Uetmyax0Da3f98vf61XyFEfND4E0CR0/H028mkxhhpXLKx7n3sBu0xViHxTEaMPe52AwaxgpTmzZMayYOPFNkZB068iNoI2nNJbkCZk8z4WTg7I90Eis8U5qsnbibraO9MP4ghVcA93fgy+gq3PpyCzTLdVxgG1CraUmeNaovGDZQXeGga5T2ztaG7hpkeP/YinNo5B3gfv2iZSufN1CdcG9khuzpAab/r3VNR6tHGHgmt6ku8fJNeTC64+3oUg8DXV6EOgYmv5+K8Z4UZgIBKZWuDHecN4IuKBLNSCcR3JP4nu8d84EwZt53csCo6RB3fvgVa7ruhz1RckHzBYmwI+fX9aexn1DmNbAQt7/AFZRg1SArJnOeGX5EjNwmRkK1uil/RUzUDQOtoOfF5Ob2CQI3xZFs2PuDu4CdBAMFvyEfWiWonYyso1Acmqheepcl73zDe4v3GM09WyRzZu/yAC2wSTAzIMEMlDi8cB9wTcgdg1AwD/NMbH4Et3y80X3f67bBmKeBBZ7EqSFvWEV4JV1GcAboIHFQuErgKnr604ss0L2fJShqSwIHSlBoPKo2lvC9r8GFPuWCL31xB4MPaqOA86V91J+01bXFA2SZFJbQ3lROeCfhdi3t23r7HtYuUXN/HuF43PVlm2FuAQ9BkCKm4mf841nwDcdhH0HUC3q26PBFI7lna2F9xmaAYie2HEf82Tfm2ekh97FPjCh08Tw+JR/1hUkmv7Qm9thM0xv1o+b0T7lqPzDvMRPNoQjUdwXCxUapMGofUgAPJdLXuQrjSVShNu7B//Ylo7TK72voD7Sub9icnJrl6Tj0dXSYVFcEj/b1nSYLaOUgRVSOv0vzgUbCfoynBQHMdmr3v2fb9bhQhR2i2VAFfydczBeBKDT4FMQxnOrpKaatwLP7hOc8JOY/Ry8y2e1ZIpYpjgQcrcEv1xjS2pqz/G/b1MzBvvG7EfgQaVB7mSq5Tum1pwI/DjO8ST9ZEicYzd9UUftKYK27z5USz8lo+P3oXDuErotDYahuiwWmvZxNZXnmhay0gMXEJZ+BNHkr4QRWWLVk04z1b+A9Vf8CkdZP2B2YUzToJekVRNyn7vXYitjJrU6SK2VjzX7xW6vdiPGNlNJ/dI3MNGgQB8Absk2Jvdov/YE6q0P15wH6Bj0YtEKR03hO5RPnUVjLW6npqfuLlucpasDFMONFp0qSO/Jd/MLQd2B/EEGfqYLsoGlCCyAe0qMplWxemBOyd/GVSiOkQ0SB9Kzcsl57Dhm6CGEQPop5OV0PxyXArA0M+iTdeOWX6rycPa2DKMRWqJg4QEd8LJbj9pZ5870GYCwU7pRxZJkM=|j50YzCfHhLm/y38TX69iSMkURwcD2nhfTwc8s/vIhVQ=',
+    Key: '2.LGNQzSqPRoQgj4luZkP+tQ==|KPeSq7aINKM7DPjeBAy768vfl0d7Q84+P9XqK6vWCSE0Yun+2dgv5IjmEjlXnaqemJdl5ymMVtOJSXCOWdsGhY6SkSubx+b8uF49jqFv6+s=|KZGWdSfD4wOay6830S2kReti1kpzsVhn1+UIWwEEMYk=',
+    ForcePasswordReset: false,
+    ResetMasterPassword: false,
+    Kdf: 0,
+    KdfIterations: 100000
+  },
+  accessToken: 'eyJhbGciOiJSUzI1NiIsImtpZCI6IkJDMzZDMjE0REI0OEYyMzVCNzdEQTNGMTcyMEMxQTM1QTk2MkVBNDNSUzI1NiIsInR5cCI6ImF0K2p3dCIsIng1dCI6InZEYkNGTnRJOGpXM2ZhUHhjZ3dhTmFsaTZrTSJ9.eyJuYmYiOjE2MzU3MjA5MzAsImV4cCI6MTYzNTcyNDUzMCwiaXNzIjoiaHR0cHM6Ly9pZGVudGl0eS5iaXR3YXJkZW4uY29tIiwiY2xpZW50X2lkIjoiY2xpIiwic3ViIjoiMTRkNGEwYmMtNzYzYy00MzZmLThlMjgtYWRiNjAxNDYxMGY4IiwiYXV0aF90aW1lIjoxNjM1NzIwOTMwLCJpZHAiOiJiaXR3YXJkZW4iLCJwcmVtaXVtIjpmYWxzZSwiZW1haWwiOiJhYWxkaGFoZUB1bWljaC5lZHUiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwic3N0YW1wIjoiYjE0YjFhMDEtZmU0MC00M2RlLTllZWQtYmU5Yjg5MWU3MGNkIiwibmFtZSI6IkFobWVkIEFiZHVsc2FsYW0gQWxkaGFoZXJpIiwiZGV2aWNlIjoiMjk4NjAzNjMtOWU4Ni00NWUyLWJjY2MtOTVlZjkwY2IxZjg5IiwianRpIjoiNEFBRTg4Q0I3QkE2RjIwMzQ0QkU5QUNBMDI5MTMzMDEiLCJpYXQiOjE2MzU3MjA5MzAsInNjb3BlIjpbImFwaSIsIm9mZmxpbmVfYWNjZXNzIl0sImFtciI6WyJBcHBsaWNhdGlvbiJdfQ.GhzQpyJZke6rkpQZANhUIo4hx27vQJYiO0T-bgAvS5J0fIXKyCfAPvDJOhQGDNI3UePJQGJrcTdfaac0L3W7pVUNzi4QbAhNoOZ9w6iQYifY2Zr5mf-EXyeUu_SM4yg5XwPIifALzJ0S5z8cKNlJS_zF6P7vYGdPa_pI3gxXG5002pWBQfMX1nVzep8jkC2o5i40Xbj5o2PXLiXzvuMhI6lo-UlNcOtJ_Nr81ds9WoKr7mM98FtQ3fQE2cjXsyRnJ2jqgG2TSvt8f0K3ZGOSr6F2So81mCf3eyZacmwakJahlB4N5qDFj_Gj2AJ8TxS8EgO2L4KG-mo8RRtfjDwQXPPycEeqhDmpHe-GcoudY0zfbMMyLrTYbIF4odkjLQT09g4xFVpKtw72pNC8FGXtCZau9kLn0TVkpzezLs3Nc6hck9rGp01fCGIHaqzOMk-7HbkaoAvGln55p05gtOwjO7nmpQO_j7pmgYAYRkeWBp85TnS3M5y9qvPp5RhspqD0nlRugySlI_ljjxlst0zNx8PA0LDUNyg1G_LyW28d_UAYFFkFkGI-I8jZ2fchzcQ5vwlDzroFlljlgf7EF5Q2b3y2d22OHqqtANAnzhGXH-P3xi7_o1CjxrnKBoCmD-Mpncm5Q0tUKSB8WYOD4kKBRsfH-CrH9DAX-99OV2x2J3o',
+  expiresIn: 3600,
+  refreshToken: '6B4C6E74481AF9DF44C30D617FCC5CB8C1A91752189653804822E6D62EEFC033',
+  tokenType: 'Bearer',
+  resetMasterPassword: false,
+  privateKey: '2.PRPynyMwuLHhEpyAdoAnnQ==|6c7mDSD+vU7pXk93RDiv4brNNqhqldZCMG2vaFYXK4c9XYr8Gi9FWD9jjW/UzBuH8n+h1PzGfhOaEiJcfBFI9jXNoixSBV09MPXT8Y4By3CAcAveEDYCmnZPeKqh3LhsTmxjJ+GCC5QPJVwkzmzeuW0p67kbszgkMd9SFZ4mazBy35nu1c/Z2MN50QhZSiWiaM7hDEd0xfwDnjq9/hcFydciqUTs/7dDvgTujG8Liq7wQGnBzpF+xbnn43U2f3NLohqj5ugUdfUsOh1g2lwdR6ibku/vJsuQCJphAvCUB0Uetmyax0Da3f98vf61XyFEfND4E0CR0/H028mkxhhpXLKx7n3sBu0xViHxTEaMPe52AwaxgpTmzZMayYOPFNkZB068iNoI2nNJbkCZk8z4WTg7I90Eis8U5qsnbibraO9MP4ghVcA93fgy+gq3PpyCzTLdVxgG1CraUmeNaovGDZQXeGga5T2ztaG7hpkeP/YinNo5B3gfv2iZSufN1CdcG9khuzpAab/r3VNR6tHGHgmt6ku8fJNeTC64+3oUg8DXV6EOgYmv5+K8Z4UZgIBKZWuDHecN4IuKBLNSCcR3JP4nu8d84EwZt53csCo6RB3fvgVa7ruhz1RckHzBYmwI+fX9aexn1DmNbAQt7/AFZRg1SArJnOeGX5EjNwmRkK1uil/RUzUDQOtoOfF5Ob2CQI3xZFs2PuDu4CdBAMFvyEfWiWonYyso1Acmqheepcl73zDe4v3GM09WyRzZu/yAC2wSTAzIMEMlDi8cB9wTcgdg1AwD/NMbH4Et3y80X3f67bBmKeBBZ7EqSFvWEV4JV1GcAboIHFQuErgKnr604ss0L2fJShqSwIHSlBoPKo2lvC9r8GFPuWCL31xB4MPaqOA86V91J+01bXFA2SZFJbQ3lROeCfhdi3t23r7HtYuUXN/HuF43PVlm2FuAQ9BkCKm4mf841nwDcdhH0HUC3q26PBFI7lna2F9xmaAYie2HEf82Tfm2ekh97FPjCh08Tw+JR/1hUkmv7Qm9thM0xv1o+b0T7lqPzDvMRPNoQjUdwXCxUapMGofUgAPJdLXuQrjSVShNu7B//Ylo7TK72voD7Sub9icnJrl6Tj0dXSYVFcEj/b1nSYLaOUgRVSOv0vzgUbCfoynBQHMdmr3v2fb9bhQhR2i2VAFfydczBeBKDT4FMQxnOrpKaatwLP7hOc8JOY/Ry8y2e1ZIpYpjgQcrcEv1xjS2pqz/G/b1MzBvvG7EfgQaVB7mSq5Tum1pwI/DjO8ST9ZEicYzd9UUftKYK27z5USz8lo+P3oXDuErotDYahuiwWmvZxNZXnmhay0gMXEJZ+BNHkr4QRWWLVk04z1b+A9Vf8CkdZP2B2YUzToJekVRNyn7vXYitjJrU6SK2VjzX7xW6vdiPGNlNJ/dI3MNGgQB8Absk2Jvdov/YE6q0P15wH6Bj0YtEKR03hO5RPnUVjLW6npqfuLlucpasDFMONFp0qSO/Jd/MLQd2B/EEGfqYLsoGlCCyAe0qMplWxemBOyd/GVSiOkQ0SB9Kzcsl57Dhm6CGEQPop5OV0PxyXArA0M+iTdeOWX6rycPa2DKMRWqJg4QEd8LJbj9pZ5870GYCwU7pRxZJkM=|j50YzCfHhLm/y38TX69iSMkURwcD2nhfTwc8s/vIhVQ=',
+  key: '2.LGNQzSqPRoQgj4luZkP+tQ==|KPeSq7aINKM7DPjeBAy768vfl0d7Q84+P9XqK6vWCSE0Yun+2dgv5IjmEjlXnaqemJdl5ymMVtOJSXCOWdsGhY6SkSubx+b8uF49jqFv6+s=|KZGWdSfD4wOay6830S2kReti1kpzsVhn1+UIWwEEMYk=',
+  twoFactorToken: undefined,
+  kdf: 0,
+  kdfIterations: 100000
+}
+Successfully wrote encPrivateKey to db & value:  2.PRPynyMwuLHhEpyAdoAnnQ==|6c7mDSD+vU7pXk93RDiv4brNNqhqldZCMG2vaFYXK4c9XYr8Gi9FWD9jjW/UzBuH8n+h1PzGfhOaEiJcfBFI9jXNoixSBV09MPXT8Y4By3CAcAveEDYCmnZPeKqh3LhsTmxjJ+GCC5QPJVwkzmzeuW0p67kbszgkMd9SFZ4mazBy35nu1c/Z2MN50QhZSiWiaM7hDEd0xfwDnjq9/hcFydciqUTs/7dDvgTujG8Liq7wQGnBzpF+xbnn43U2f3NLohqj5ugUdfUsOh1g2lwdR6ibku/vJsuQCJphAvCUB0Uetmyax0Da3f98vf61XyFEfND4E0CR0/H028mkxhhpXLKx7n3sBu0xViHxTEaMPe52AwaxgpTmzZMayYOPFNkZB068iNoI2nNJbkCZk8z4WTg7I90Eis8U5qsnbibraO9MP4ghVcA93fgy+gq3PpyCzTLdVxgG1CraUmeNaovGDZQXeGga5T2ztaG7hpkeP/YinNo5B3gfv2iZSufN1CdcG9khuzpAab/r3VNR6tHGHgmt6ku8fJNeTC64+3oUg8DXV6EOgYmv5+K8Z4UZgIBKZWuDHecN4IuKBLNSCcR3JP4nu8d84EwZt53csCo6RB3fvgVa7ruhz1RckHzBYmwI+fX9aexn1DmNbAQt7/AFZRg1SArJnOeGX5EjNwmRkK1uil/RUzUDQOtoOfF5Ob2CQI3xZFs2PuDu4CdBAMFvyEfWiWonYyso1Acmqheepcl73zDe4v3GM09WyRzZu/yAC2wSTAzIMEMlDi8cB9wTcgdg1AwD/NMbH4Et3y80X3f67bBmKeBBZ7EqSFvWEV4JV1GcAboIHFQuErgKnr604ss0L2fJShqSwIHSlBoPKo2lvC9r8GFPuWCL31xB4MPaqOA86V91J+01bXFA2SZFJbQ3lROeCfhdi3t23r7HtYuUXN/HuF43PVlm2FuAQ9BkCKm4mf841nwDcdhH0HUC3q26PBFI7lna2F9xmaAYie2HEf82Tfm2ekh97FPjCh08Tw+JR/1hUkmv7Qm9thM0xv1o+b0T7lqPzDvMRPNoQjUdwXCxUapMGofUgAPJdLXuQrjSVShNu7B//Ylo7TK72voD7Sub9icnJrl6Tj0dXSYVFcEj/b1nSYLaOUgRVSOv0vzgUbCfoynBQHMdmr3v2fb9bhQhR2i2VAFfydczBeBKDT4FMQxnOrpKaatwLP7hOc8JOY/Ry8y2e1ZIpYpjgQcrcEv1xjS2pqz/G/b1MzBvvG7EfgQaVB7mSq5Tum1pwI/DjO8ST9ZEicYzd9UUftKYK27z5USz8lo+P3oXDuErotDYahuiwWmvZxNZXnmhay0gMXEJZ+BNHkr4QRWWLVk04z1b+A9Vf8CkdZP2B2YUzToJekVRNyn7vXYitjJrU6SK2VjzX7xW6vdiPGNlNJ/dI3MNGgQB8Absk2Jvdov/YE6q0P15wH6Bj0YtEKR03hO5RPnUVjLW6npqfuLlucpasDFMONFp0qSO/Jd/MLQd2B/EEGfqYLsoGlCCyAe0qMplWxemBOyd/GVSiOkQ0SB9Kzcsl57Dhm6CGEQPop5OV0PxyXArA0M+iTdeOWX6rycPa2DKMRWqJg4QEd8LJbj9pZ5870GYCwU7pRxZJkM=|j50YzCfHhLm/y38TX69iSMkURwcD2nhfTwc8s/vIhVQ=
+
+
+============================================================
+loginHelper
+result:  AuthResult {
+  twoFactor: false,
+  captchaSiteKey: undefined,
+  resetMasterPassword: false,
+  twoFactorProviders: null
+}
+after calling this.authService.logIn, response:  AuthResult {
+  twoFactor: false,
+  captchaSiteKey: undefined,
+  resetMasterPassword: false,
+  twoFactorProviders: null
+}
+
+
+
+ inside aesEncrypt!!!
+
+
+
+data:  ArrayBuffer {
+  [Uint8Contents]: <c2 5c 46 85 fa c9 cc c4 7d a2 95 af d1 fa a8 02 93 58 73 fe 51 a4 0a f7 bd 55 f4 33 87 61 7f c7>,
+  byteLength: 32
+}
+iv:  ArrayBuffer {
+  [Uint8Contents]: <4c 42 aa 6f ec 20 01 66 4e fb 7b b6 69 46 47 a8>,
+  byteLength: 16
+}
+key:  ArrayBuffer {
+  [Uint8Contents]: <fb 48 33 5c fd e1 e1 07 81 db ff 71 5b f8 0b c3 d9 43 55 f8 b7 02 ae e9 94 a2 3d c4 92 43 ed 39>,
+  byteLength: 32
+}
+cipher:  Cipheriv {
+  _decoder: null,
+  _options: undefined,
+  [Symbol(kHandle)]: CipherBase {}
+}
+encBuf:  <Buffer 2c 90 8f 74 94 31 60 38 ac c6 d5 28 9e 04 70 e7 8d a2 79 fe e7 34 36 3c 14 63 8d 9e 80 4b a4 4a ad 21 5d 70 b7 fc 0f 43 a7 9b 6b 99 98 6a 4f 69>
+
+-----------------------------------------------------
+Crypto Service (aesEcnrypt): data:  ArrayBuffer {
+  [Uint8Contents]: <c2 5c 46 85 fa c9 cc c4 7d a2 95 af d1 fa a8 02 93 58 73 fe 51 a4 0a f7 bd 55 f4 33 87 61 7f c7>,
+  byteLength: 32
+}
+key:  SymmetricCryptoKey {
+  key: ArrayBuffer {
+    [Uint8Contents]: <fb 48 33 5c fd e1 e1 07 81 db ff 71 5b f8 0b c3 d9 43 55 f8 b7 02 ae e9 94 a2 3d c4 92 43 ed 39 07 04 85 0b e2 5e c5 fc 02 78 dd 2e d8 b2 c3 e3 ae 2d 40 18 1b 4a 2f 38 0a 45 35 a2 58 af 1f 17>,
+    byteLength: 64
+  },
+  encType: 2,
+  encKey: ArrayBuffer {
+    [Uint8Contents]: <fb 48 33 5c fd e1 e1 07 81 db ff 71 5b f8 0b c3 d9 43 55 f8 b7 02 ae e9 94 a2 3d c4 92 43 ed 39>,
+    byteLength: 32
+  },
+  macKey: ArrayBuffer {
+    [Uint8Contents]: <07 04 85 0b e2 5e c5 fc 02 78 dd 2e d8 b2 c3 e3 ae 2d 40 18 1b 4a 2f 38 0a 45 35 a2 58 af 1f 17>,
+    byteLength: 32
+  },
+  keyB64: '+0gzXP3h4QeB2/9xW/gLw9lDVfi3Aq7plKI9xJJD7TkHBIUL4l7F/AJ43S7YssPjri1AGBtKLzgKRTWiWK8fFw==',
+  encKeyB64: '+0gzXP3h4QeB2/9xW/gLw9lDVfi3Aq7plKI9xJJD7Tk=',
+  macKeyB64: 'BwSFC+JexfwCeN0u2LLD464tQBgbSi84CkU1olivHxc='
+}
+encryptedObj:  EncryptedObject {
+  key: SymmetricCryptoKey {
+    key: ArrayBuffer {
+      [Uint8Contents]: <fb 48 33 5c fd e1 e1 07 81 db ff 71 5b f8 0b c3 d9 43 55 f8 b7 02 ae e9 94 a2 3d c4 92 43 ed 39 07 04 85 0b e2 5e c5 fc 02 78 dd 2e d8 b2 c3 e3 ae 2d 40 18 1b 4a 2f 38 0a 45 35 a2 58 af 1f 17>,
+      byteLength: 64
+    },
+    encType: 2,
+    encKey: ArrayBuffer {
+      [Uint8Contents]: <fb 48 33 5c fd e1 e1 07 81 db ff 71 5b f8 0b c3 d9 43 55 f8 b7 02 ae e9 94 a2 3d c4 92 43 ed 39>,
+      byteLength: 32
+    },
+    macKey: ArrayBuffer {
+      [Uint8Contents]: <07 04 85 0b e2 5e c5 fc 02 78 dd 2e d8 b2 c3 e3 ae 2d 40 18 1b 4a 2f 38 0a 45 35 a2 58 af 1f 17>,
+      byteLength: 32
+    },
+    keyB64: '+0gzXP3h4QeB2/9xW/gLw9lDVfi3Aq7plKI9xJJD7TkHBIUL4l7F/AJ43S7YssPjri1AGBtKLzgKRTWiWK8fFw==',
+    encKeyB64: '+0gzXP3h4QeB2/9xW/gLw9lDVfi3Aq7plKI9xJJD7Tk=',
+    macKeyB64: 'BwSFC+JexfwCeN0u2LLD464tQBgbSi84CkU1olivHxc='
+  },
+  iv: ArrayBuffer {
+    [Uint8Contents]: <4c 42 aa 6f ec 20 01 66 4e fb 7b b6 69 46 47 a8>,
+    byteLength: 16
+  },
+  data: ArrayBuffer {
+    [Uint8Contents]: <2c 90 8f 74 94 31 60 38 ac c6 d5 28 9e 04 70 e7 8d a2 79 fe e7 34 36 3c 14 63 8d 9e 80 4b a4 4a ad 21 5d 70 b7 fc 0f 43 a7 9b 6b 99 98 6a 4f 69>,
+    byteLength: 48
+  }
+}
+obj.key:  SymmetricCryptoKey {
+  key: ArrayBuffer {
+    [Uint8Contents]: <fb 48 33 5c fd e1 e1 07 81 db ff 71 5b f8 0b c3 d9 43 55 f8 b7 02 ae e9 94 a2 3d c4 92 43 ed 39 07 04 85 0b e2 5e c5 fc 02 78 dd 2e d8 b2 c3 e3 ae 2d 40 18 1b 4a 2f 38 0a 45 35 a2 58 af 1f 17>,
+    byteLength: 64
+  },
+  encType: 2,
+  encKey: ArrayBuffer {
+    [Uint8Contents]: <fb 48 33 5c fd e1 e1 07 81 db ff 71 5b f8 0b c3 d9 43 55 f8 b7 02 ae e9 94 a2 3d c4 92 43 ed 39>,
+    byteLength: 32
+  },
+  macKey: ArrayBuffer {
+    [Uint8Contents]: <07 04 85 0b e2 5e c5 fc 02 78 dd 2e d8 b2 c3 e3 ae 2d 40 18 1b 4a 2f 38 0a 45 35 a2 58 af 1f 17>,
+    byteLength: 32
+  },
+  keyB64: '+0gzXP3h4QeB2/9xW/gLw9lDVfi3Aq7plKI9xJJD7TkHBIUL4l7F/AJ43S7YssPjri1AGBtKLzgKRTWiWK8fFw==',
+  encKeyB64: '+0gzXP3h4QeB2/9xW/gLw9lDVfi3Aq7plKI9xJJD7Tk=',
+  macKeyB64: 'BwSFC+JexfwCeN0u2LLD464tQBgbSi84CkU1olivHxc='
+}
+obj.iv:  ArrayBuffer {
+  [Uint8Contents]: <4c 42 aa 6f ec 20 01 66 4e fb 7b b6 69 46 47 a8>,
+  byteLength: 16
+}
+obj.data:  ArrayBuffer {
+  [Uint8Contents]: <2c 90 8f 74 94 31 60 38 ac c6 d5 28 9e 04 70 e7 8d a2 79 fe e7 34 36 3c 14 63 8d 9e 80 4b a4 4a ad 21 5d 70 b7 fc 0f 43 a7 9b 6b 99 98 6a 4f 69>,
+  byteLength: 48
+}
+obj.mac:  ArrayBuffer {
+  [Uint8Contents]: <34 cf 9e ec 98 00 52 d5 35 36 97 86 fc b6 73 94 91 cf cc e0 b8 6b 09 cd b3 19 a6 10 47 3a 5f 99>,
+  byteLength: 32
+}
+----------------------------------------------
+Successfully wrote __PROTECTED__key to db & value:  AkxCqm/sIAFmTvt7tmlGR6g0z57smABS1TU2l4b8tnOUkc/M4LhrCc2zGaYQRzpfmSyQj3SUMWA4rMbVKJ4EcOeNonn+5zQ2PBRjjZ6AS6RKrSFdcLf8D0Onm2uZmGpPaQ==
+Successfully wrote accessToken to db & value:  eyJhbGciOiJSUzI1NiIsImtpZCI6IkJDMzZDMjE0REI0OEYyMzVCNzdEQTNGMTcyMEMxQTM1QTk2MkVBNDNSUzI1NiIsInR5cCI6ImF0K2p3dCIsIng1dCI6InZEYkNGTnRJOGpXM2ZhUHhjZ3dhTmFsaTZrTSJ9.eyJuYmYiOjE2MzU3MjA5MzMsImV4cCI6MTYzNTcyNDUzMywiaXNzIjoiaHR0cHM6Ly9pZGVudGl0eS5iaXR3YXJkZW4uY29tIiwiY2xpZW50X2lkIjoiY2xpIiwic3ViIjoiMTRkNGEwYmMtNzYzYy00MzZmLThlMjgtYWRiNjAxNDYxMGY4IiwiYXV0aF90aW1lIjoxNjM1NzIwOTMwLCJpZHAiOiJiaXR3YXJkZW4iLCJwcmVtaXVtIjpmYWxzZSwiZW1haWwiOiJhYWxkaGFoZUB1bWljaC5lZHUiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwic3N0YW1wIjoiYjE0YjFhMDEtZmU0MC00M2RlLTllZWQtYmU5Yjg5MWU3MGNkIiwibmFtZSI6IkFobWVkIEFiZHVsc2FsYW0gQWxkaGFoZXJpIiwiZGV2aWNlIjoiMjk4NjAzNjMtOWU4Ni00NWUyLWJjY2MtOTVlZjkwY2IxZjg5IiwianRpIjoiODFCMUM3NzlCNjUyQ0VGMjUzQ0U5MjU4NEMwMzU3QjUiLCJpYXQiOjE2MzU3MjA5MzMsInNjb3BlIjpbImFwaSIsIm9mZmxpbmVfYWNjZXNzIl0sImFtciI6WyJBcHBsaWNhdGlvbiJdfQ.AjodFY0h9wbkOmdHi50XYMEmsmNsBDeDVKfimaaoBUtxXx6V_WjbEoYq2nWve2M5ShlRGWvcTyVkc_lHaoQPDHm_nyaDr-wH-9h91qjtACB4dhyIdH5ZKhyhmNFPt9ss9fClezOqsQJeitMZ3okVBSyauz3o8nqQSlDGUyx4e_G74r2KDzrHTg3fZd8kwRNEKVELaRzZ0AVLquVGkKv25C0nry0ThZ_Ms5etIKvdw9lb-0ZGwsBqBmwLzgm30kdt8YwZji9-go1r6yt3UTFGXXXTdLIzVBjnOWORkIz7EC9uxW4JWFeVs2mePCaiIMkBNZeug1p9a8-H4UaQBP4UbyfgYn0CJ54QVHk8yekYGgn9j_sCMc7Co7XVuCcdHK_useNWZaAZA-U4gXouXLCxOBwnH5oIJ9cLKTzAKYMOjq7l7xIwnyJzKy1jChKMid9GM88lmRB2Vp769GIT2TtxzEhI7O0hOmDt1Zay4Q_nAkBR3uAfZCGRbmu3itaup7lAkt8dyhqaGk0jAh0v1JwHS4YL-kB2GQAeNHLLrhfhh7XAwYOPL8aeYQinPkwFXCPH1S9oKydm40nMb1SV6ca-Xy36_lsw-wOMTLj3F7QFK1eUvVEBdCUS0-yQgs7ha1aBZQLe_V7OGcl0SMvFYsN8ynr9XESFbhUnw1lIFds154g
+Successfully wrote refreshToken to db & value:  6B4C6E74481AF9DF44C30D617FCC5CB8C1A91752189653804822E6D62EEFC033
+Successfully wrote encKey to db & value:  2.LGNQzSqPRoQgj4luZkP+tQ==|KPeSq7aINKM7DPjeBAy768vfl0d7Q84+P9XqK6vWCSE0Yun+2dgv5IjmEjlXnaqemJdl5ymMVtOJSXCOWdsGhY6SkSubx+b8uF49jqFv6+s=|KZGWdSfD4wOay6830S2kReti1kpzsVhn1+UIWwEEMYk=
+Successfully wrote encPrivateKey to db & value:  2.PRPynyMwuLHhEpyAdoAnnQ==|6c7mDSD+vU7pXk93RDiv4brNNqhqldZCMG2vaFYXK4c9XYr8Gi9FWD9jjW/UzBuH8n+h1PzGfhOaEiJcfBFI9jXNoixSBV09MPXT8Y4By3CAcAveEDYCmnZPeKqh3LhsTmxjJ+GCC5QPJVwkzmzeuW0p67kbszgkMd9SFZ4mazBy35nu1c/Z2MN50QhZSiWiaM7hDEd0xfwDnjq9/hcFydciqUTs/7dDvgTujG8Liq7wQGnBzpF+xbnn43U2f3NLohqj5ugUdfUsOh1g2lwdR6ibku/vJsuQCJphAvCUB0Uetmyax0Da3f98vf61XyFEfND4E0CR0/H028mkxhhpXLKx7n3sBu0xViHxTEaMPe52AwaxgpTmzZMayYOPFNkZB068iNoI2nNJbkCZk8z4WTg7I90Eis8U5qsnbibraO9MP4ghVcA93fgy+gq3PpyCzTLdVxgG1CraUmeNaovGDZQXeGga5T2ztaG7hpkeP/YinNo5B3gfv2iZSufN1CdcG9khuzpAab/r3VNR6tHGHgmt6ku8fJNeTC64+3oUg8DXV6EOgYmv5+K8Z4UZgIBKZWuDHecN4IuKBLNSCcR3JP4nu8d84EwZt53csCo6RB3fvgVa7ruhz1RckHzBYmwI+fX9aexn1DmNbAQt7/AFZRg1SArJnOeGX5EjNwmRkK1uil/RUzUDQOtoOfF5Ob2CQI3xZFs2PuDu4CdBAMFvyEfWiWonYyso1Acmqheepcl73zDe4v3GM09WyRzZu/yAC2wSTAzIMEMlDi8cB9wTcgdg1AwD/NMbH4Et3y80X3f67bBmKeBBZ7EqSFvWEV4JV1GcAboIHFQuErgKnr604ss0L2fJShqSwIHSlBoPKo2lvC9r8GFPuWCL31xB4MPaqOA86V91J+01bXFA2SZFJbQ3lROeCfhdi3t23r7HtYuUXN/HuF43PVlm2FuAQ9BkCKm4mf841nwDcdhH0HUC3q26PBFI7lna2F9xmaAYie2HEf82Tfm2ekh97FPjCh08Tw+JR/1hUkmv7Qm9thM0xv1o+b0T7lqPzDvMRPNoQjUdwXCxUapMGofUgAPJdLXuQrjSVShNu7B//Ylo7TK72voD7Sub9icnJrl6Tj0dXSYVFcEj/b1nSYLaOUgRVSOv0vzgUbCfoynBQHMdmr3v2fb9bhQhR2i2VAFfydczBeBKDT4FMQxnOrpKaatwLP7hOc8JOY/Ry8y2e1ZIpYpjgQcrcEv1xjS2pqz/G/b1MzBvvG7EfgQaVB7mSq5Tum1pwI/DjO8ST9ZEicYzd9UUftKYK27z5USz8lo+P3oXDuErotDYahuiwWmvZxNZXnmhay0gMXEJZ+BNHkr4QRWWLVk04z1b+A9Vf8CkdZP2B2YUzToJekVRNyn7vXYitjJrU6SK2VjzX7xW6vdiPGNlNJ/dI3MNGgQB8Absk2Jvdov/YE6q0P15wH6Bj0YtEKR03hO5RPnUVjLW6npqfuLlucpasDFMONFp0qSO/Jd/MLQd2B/EEGfqYLsoGlCCyAe0qMplWxemBOyd/GVSiOkQ0SB9Kzcsl57Dhm6CGEQPop5OV0PxyXArA0M+iTdeOWX6rycPa2DKMRWqJg4QEd8LJbj9pZ5870GYCwU7pRxZJkM=|j50YzCfHhLm/y38TX69iSMkURwcD2nhfTwc8s/vIhVQ=
+Successfully wrote encProviderKeys to db & value:  {}
+Successfully wrote encOrgKeys to db & value:  {}
+Successfully wrote securityStamp to db & value:  b14b1a01-fe40-43de-9eed-be9b891e70cd
+Successfully wrote emailVerified to db & value:  true
+Successfully wrote forcePasswordReset to db & value:  false
+Successfully wrote organizations_14d4a0bc-763c-436f-8e28-adb6014610f8 to db & value:  {}
+Successfully wrote providers_14d4a0bc-763c-436f-8e28-adb6014610f8 to db & value:  {}
+Successfully wrote folders_14d4a0bc-763c-436f-8e28-adb6014610f8 to db & value:  {}
+Successfully wrote collections_14d4a0bc-763c-436f-8e28-adb6014610f8 to db & value:  {}
+Successfully wrote ciphers_14d4a0bc-763c-436f-8e28-adb6014610f8 to db & value:  {
+  'dd7b6833-c1a6-4e26-b816-adcd0018db4d': CipherData {
+    id: 'dd7b6833-c1a6-4e26-b816-adcd0018db4d',
+    organizationId: null,
+    folderId: null,
+    userId: '14d4a0bc-763c-436f-8e28-adb6014610f8',
+    edit: true,
+    viewPassword: true,
+    organizationUseTotp: false,
+    favorite: false,
+    revisionDate: '2021-10-26T01:30:30.0166667Z',
+    type: 1,
+    name: '2.ef23Mwa66wk2i9mLeNsT5Q==|4ZsuOmaE2OryEPwcoVKCTg==|LDI+6pAoA8hE3JbFwngn+tK5+jg/3CgeiNqd48W5tRQ=',
+    notes: '2.r0Sfkb+XRwXF3L7SxGihdA==|yHvXrpYvm1uRm/gpta8niWNK+PAZ8dzy8rygm5PZuRs=|Bf8BA06AOK0SQOfZL+pWcnw7eJFzDUk8G23AUR0I/to=',
+    collectionIds: [],
+    deletedDate: null,
+    reprompt: 0,
+    login: LoginData {
+      username: '2.Sn8TN1bjRyL/IIv3exiGLQ==|Eq8KXV2fMoCucmse39Qm+Q==|gEaCGlMOOX8nq0zz/yXV9gEzEIcDtvOGcisxYbHJnLE=',
+      password: '2.Y76gtR2G65X4nMy9VRnmOw==|+0DOvbG1sdZCZ1XNGDLvIQ==|S+kiB9QIsP0kLqVqfgayP3EQIUmtjps8coS15MEonEU=',
+      passwordRevisionDate: null,
+      totp: '2.IAP1HUXeUjWarozuwK27Rw==|COVLL0duLNDAo9JvG0LnVqNrVb9MT43rVV0lVde7Q20=|1Pl6Xd5MFhn5Kkt2X32F4Foibu6Zb9Tf4HSnrUFPx+A=',
+      autofillOnPageLoad: null,
+      uris: []
+    }
+  },
+  '7beecff0-d413-44ee-8f9d-adcd001d03f8': CipherData {
+    id: '7beecff0-d413-44ee-8f9d-adcd001d03f8',
+    organizationId: null,
+    folderId: null,
+    userId: '14d4a0bc-763c-436f-8e28-adb6014610f8',
+    edit: true,
+    viewPassword: true,
+    organizationUseTotp: false,
+    favorite: false,
+    revisionDate: '2021-10-26T01:54:01.7633333Z',
+    type: 1,
+    name: '2.1nJWjHLGT91/RpEPDZ2yWg==|ItkoayoQhTzv3yufPXSiaA==|6CII1IM7zdcFE9xqsXz2coIr+2KwuGmh6WJNkiMM20g=',
+    notes: '2.3KrTugZ5GhdSHX1lf1AbGA==|JCQJdLYOkoaH9oGvR+SD2NOudBlt9BGfy0BHO8SLM3g=|Z7DTO/OZHHLiMJxPh06z65EGtOa3Gd1sP82iBmcKlck=',
+    collectionIds: [],
+    deletedDate: '2021-10-26T01:54:01.76Z',
+    reprompt: 0,
+    login: LoginData {
+      username: '2.rzKT4iDVuQ234oeSKo/PyQ==|8J+HL5xg39IXkC2xxA/qOw==|IgS+kRTPi0+Jwsz4WGRyrtmQ3eniP7c5q5IZzLvI58c=',
+      password: '2.ienVChM9ucy1TMT9XwHPpg==|/ghLOpDvTvNo0QvIVfN99g==|osCOHEfcgdmrFTW6MsPpkv3h3Howlwdrn/nTxWT7nP0=',
+      passwordRevisionDate: null,
+      totp: '2./nCTVDF0s4xOg8b3l3LySg==|BMqhj4eNbxTrJtOaN7pD8xQeFpLVm4EPZ/d/KvaOhkM=|oeHeEVlJpbNE5nl6Q8G9ZwJDfE69nWL61Qsyy3Z6Pes=',
+      autofillOnPageLoad: null,
+      uris: []
+    }
+  },
+  'dd869105-7e51-42a0-bb6e-adcd00201d3e': CipherData {
+    id: 'dd869105-7e51-42a0-bb6e-adcd00201d3e',
+    organizationId: null,
+    folderId: null,
+    userId: '14d4a0bc-763c-436f-8e28-adb6014610f8',
+    edit: true,
+    viewPassword: true,
+    organizationUseTotp: false,
+    favorite: false,
+    revisionDate: '2021-10-26T02:31:51.3166667Z',
+    type: 1,
+    name: '2.HkGFvBlEUg3UCsp+NEc7kg==|BMWRucepxzgEpyw+UrsUpA==|oD9eQePBJWepav2KUuTGELQvvy3kjzUyx/NY10nL1+c=',
+    notes: '2.ykHmC/044ykaRCCk72S0Yg==|gEkKkL8TdcCq/ZgkVGeQM4ck5mGRUPijY3T2lv5blvk=|tLdKId6BFE5ePL0/MGeEX6VXxmZJk0NvWNk1KzXrvoM=',
+    collectionIds: [],
+    deletedDate: '2021-10-26T02:31:51.32Z',
+    reprompt: 0,
+    login: LoginData {
+      username: '2.FO6M6dIJIUrgnd46+HZYEQ==|fXZUC2Sd9469PvT22i8+UQ==|t1gqIetKUt18SZ8Pbgr+Y6Ds4eepXb7sEVUnnjzpBIo=',
+      password: '2.WCKiLYMbArcHwo2AHbQ1cw==|1lTVLMWDJcB2AuUTBO8NHw==|AAbtIaw3AoowRa9vFQBPqczImtBLvYQX9qb288xt8mE=',
+      passwordRevisionDate: null,
+      totp: '2.iatDLI6nPyf+tKt3/LH7/A==|3BuYb/3qu5gjNfUpb0zFjgIFik/krM3YGj0eP+Yu6Qw=|kS6BStSQ/8/morpJ/0jMoQEg8Agyp4fRoVe6VwZPw9w=',
+      autofillOnPageLoad: null,
+      uris: []
+    }
+  },
+  'f72f7dc1-78c4-41c0-90e6-adcd002b3688': CipherData {
+    id: 'f72f7dc1-78c4-41c0-90e6-adcd002b3688',
+    organizationId: null,
+    folderId: null,
+    userId: '14d4a0bc-763c-436f-8e28-adb6014610f8',
+    edit: true,
+    viewPassword: true,
+    organizationUseTotp: false,
+    favorite: false,
+    revisionDate: '2021-10-26T15:48:49.68Z',
+    type: 1,
+    name: '2.agRSLSUMfxCsvseTvNTUeg==|6Nt6q3f8Lk3g8V3K5Wo0Dg==|x+k0MROEyHOf35u9MNAs1+NlMR/cmiaGuU8q3pn7kCw=',
+    notes: '2.DcLYoC9JKQhiVYjXhL7GDw==|/f9SdSRnhpHEwp/T5UoXiqHdJ/C31ZXR5VCF+uRT/Wg=|tyU7kNRPOQEOFr3CY2sjMopujSiLDN5O8ZKnQc2vpxU=',
+    collectionIds: [],
+    deletedDate: '2021-10-26T15:48:49.68Z',
+    reprompt: 0,
+    login: LoginData {
+      username: '2.U722XG9RuKW7g5lEVeP9WQ==|So5QdyTiXKQLnMNayBwuwA==|Ew9b5gG7SzzuKLLNfVXvj/zlyRMgYL9POh83rTUP3IA=',
+      password: '2.kV3krgHXwKYBOIoK/1JAuQ==|XKg0nJfr2DVpBjHLLJHCmw==|gT4nW8oz3fXJA+0UsRs8C086DY9cKChYKVikUOic+u8=',
+      passwordRevisionDate: null,
+      totp: '2.A0H9rSAV40Abxc9gdK/NWA==|t7a3xxSMTR9pnQz6yDTFfvfTPeeedGHSecZzZ/kXFRw=|0dSy47XoYPI93F/0oQFESuuSjX2HGlb402f4CBd7UC0=',
+      autofillOnPageLoad: null,
+      uris: []
+    }
+  },
+  'b7a1fdbb-70fb-4142-900c-adcd001f6dad': CipherData {
+    id: 'b7a1fdbb-70fb-4142-900c-adcd001f6dad',
+    organizationId: null,
+    folderId: null,
+    userId: '14d4a0bc-763c-436f-8e28-adb6014610f8',
+    edit: true,
+    viewPassword: true,
+    organizationUseTotp: false,
+    favorite: false,
+    revisionDate: '2021-10-26T02:31:47.8166667Z',
+    type: 1,
+    name: '2.NxCWOVbZU1552eGMyr1xGg==|F3stgetadmjEkd6bzo2qog==|qjtANpqhboQf8IYxiqi1JErNorY7gd3/BuevrQV3JHM=',
+    notes: '2.81FSkvtWX+RWrL3y/5cicw==|M0Vok9FN1nbHFU8P9aJNrz+gGnlTmWCSMl9mNHnlgoo=|biW7+z3tDPaMOgmQePfR9mJ49Z+v7yghhMNREZ6a1IU=',
+    collectionIds: [],
+    deletedDate: '2021-10-26T02:31:47.82Z',
+    reprompt: 0,
+    login: LoginData {
+      username: '2.0hTYGs0u1wZCmjh2TBjzLA==|t70l7eeICha72yR2XigIyQ==|pvbLE8vDggNDCibquAoSrCk8VVwdJcEU4gknHIvFvdI=',
+      password: '2.U37R2409hfzpQkpALTZOEw==|eWZStKalrWoZEIXzgXDNmA==|5ieiJe/UvyPP5KPNYt2L5hBFvJ5JRt/a22FduE56pfE=',
+      passwordRevisionDate: null,
+      totp: '2.XK4/AlK+hmv3ENe5YV1IEw==|G/OtmaO9Y9rd7jX6OAjFrWPGRx9KGt+UIJIztL7oQNc=|6Ft0FZYWRrR6GDzRFwT6KrmpEzdjtv28M0YN5DpmkW8=',
+      autofillOnPageLoad: null,
+      uris: []
+    }
+  },
+  '933c93f3-7743-47ec-a17c-adcd001f2143': CipherData {
+    id: '933c93f3-7743-47ec-a17c-adcd001f2143',
+    organizationId: null,
+    folderId: null,
+    userId: '14d4a0bc-763c-436f-8e28-adb6014610f8',
+    edit: true,
+    viewPassword: true,
+    organizationUseTotp: false,
+    favorite: false,
+    revisionDate: '2021-10-26T01:53:57.9233333Z',
+    type: 1,
+    name: '2.BKnlYQTGnaqraxA6Bp3x3A==|GncmOSJmD2tu3knIqzu77g==|55juM0vW2x33wpfyPfknNwR55Dky3RYd88+q5I5C0SY=',
+    notes: '2.acpz7eg4lL3k9PnHogwNxg==|q2uKECHVrsOcv3uqUKVVp6RdEF6UDgaHFjpg6O1ZhUw=|iTz+KP7Jlt1XAfoxIdfB5Dyfob+nx1G9BxrC28+G1bU=',
+    collectionIds: [],
+    deletedDate: '2021-10-26T01:53:57.92Z',
+    reprompt: 0,
+    login: LoginData {
+      username: '2.RT6uztGe+2B+sMC/xO3f/Q==|OjjYeEKy34wTdRn1myQGBQ==|OCaKV8gyn8OmK6Lopia64Q2oaGlHeJh7ZhrvBud2SZc=',
+      password: '2.XR7Z83CG0JxdaaeO7vApTA==|WnB3GkCIJ1/3sE4qeURUEQ==|7E2bLGre95hXyD02qMewBgxuto2aNMZCLZHSxQ+nWr0=',
+      passwordRevisionDate: null,
+      totp: '2.K2RK1S1CwvmYXYVyOmdOlg==|ucOmuOCSOMz2kzJ9f9I+uv1jOrwCvb4jfen5PRnbhhA=|KntXgvuWZxC3Aj/oaEcp/5Xiyf2vCZ8SI5D2KJYG8OY=',
+      autofillOnPageLoad: null,
+      uris: []
+    }
+  },
+  '96799a24-1d6e-45c9-bef2-adcd001b4c17': CipherData {
+    id: '96799a24-1d6e-45c9-bef2-adcd001b4c17',
+    organizationId: null,
+    folderId: null,
+    userId: '14d4a0bc-763c-436f-8e28-adb6014610f8',
+    edit: true,
+    viewPassword: true,
+    organizationUseTotp: false,
+    favorite: false,
+    revisionDate: '2021-10-26T01:54:05.8533333Z',
+    type: 1,
+    name: '2./Aq1GlNnFzgLDfpQUlKxDw==|o8WuT2r+R9JbZhNYd6vUbA==|mzM4+DtTIKmNKKrzm1/8uYIXwo5Qo18punI4xtoXEiw=',
+    notes: '2.bCaS9M4AeJbFYWVXnXkVZA==|mPo4RgsZ/LjXOXaz6D9LdWVVEnDI3PmzKc7V9V7nKWE=|QDKCnsd7SwVGoiatUU4lOgNjJW6jD/qrifkvwCLN5zI=',
+    collectionIds: [],
+    deletedDate: '2021-10-26T01:54:05.85Z',
+    reprompt: 0,
+    login: LoginData {
+      username: '2.42mZkQyL4JS7l0BNizSg6g==|9UK0R2JqdZ2CxTm7xNi04g==|9IkFCzkY2akLHntfKh8mfKypSRsHpodj0oNYlaN/+vs=',
+      password: '2.FfxcNJh/XZPYhRGAYUMZdw==|TIrtb7Kn20aP2AlC9WkByg==|HC6CaNmzn4SbTbTjasdombQrwqxb4RfpMKGVPEGrlwk=',
+      passwordRevisionDate: null,
+      totp: '2.M7JKgdB4GhsgiZm4ADJE/A==|4dJI4GRxqt+K3JGnsS5er12+dftA1Af74RSKyfGG8O8=|ZaR/rqZsDVHwT3IbZeZEYstwq3W1vrBbKWz52FuSE70=',
+      autofillOnPageLoad: null,
+      uris: []
+    }
+  },
+  '42633203-9c54-4b0d-b529-adcd0019e6ba': CipherData {
+    id: '42633203-9c54-4b0d-b529-adcd0019e6ba',
+    organizationId: null,
+    folderId: null,
+    userId: '14d4a0bc-763c-436f-8e28-adb6014610f8',
+    edit: true,
+    viewPassword: true,
+    organizationUseTotp: false,
+    favorite: false,
+    revisionDate: '2021-10-26T01:54:09.9033333Z',
+    type: 1,
+    name: '2.Cza/VZuxXzqMDo9c/kanrw==|Hnc1l7p6rqG5chIHKAcTFg==|PMqGvmCjqahz8fqv9IFOQsCv9s00gCSyZnfyA48noZE=',
+    notes: '2.GFHp8GIELJH2EHBVnY9Hbw==|Oz6KUerE94nV9F2xC5Q4udx+dxGBuR+li1GFMxIlhHU=|EFkQhVtqzvQOpVNFH8m5Nl4p0338IRdqqBYjwTx6+N0=',
+    collectionIds: [],
+    deletedDate: '2021-10-26T01:54:09.9Z',
+    reprompt: 0,
+    login: LoginData {
+      username: '2.l4v6RILp54jveasoKdT3mw==|R6T1TUFqzWzCsahdIFQPFA==|go0CPJvkc/vi/8hpcQaItMiqcSmv9X2ZubQ70kuJZpw=',
+      password: '2.Z1iKkiAqAyH0sSvPdRiocA==|kD26eDJoJZWoeLr1aJo+aA==|AVhTjqFXIWBPwOCz+j1qv2I449yoHAyipjKFi4OJXJ0=',
+      passwordRevisionDate: null,
+      totp: '2.r2xzKLbWr2mVZqdV1exu0A==|KGdmtqzDJl1mJye5+7VQXkrrybwf6Qg3VjKzgdocfhg=|ByR3hR896crK9QpVT+AdUjitV++wEuCX/9/qj4LvkRE=',
+      autofillOnPageLoad: null,
+      uris: []
+    }
+  },
+  'e79ec4a6-ab0c-4a31-a0ea-adcd00194532': CipherData {
+    id: 'e79ec4a6-ab0c-4a31-a0ea-adcd00194532',
+    organizationId: null,
+    folderId: null,
+    userId: '14d4a0bc-763c-436f-8e28-adb6014610f8',
+    edit: true,
+    viewPassword: true,
+    organizationUseTotp: false,
+    favorite: false,
+    revisionDate: '2021-10-26T01:54:13.1866667Z',
+    type: 1,
+    name: '2.N1ZuHtB1AJKbfXShi4NGGQ==|cx5ugMXIrk7+MuJbCUYFYQ==|aplFzufb/kAlps+b16r7FHUr/E3Bnb/YNfrWkn/lfJY=',
+    notes: '2.b3+nCy/BZ/2iTwLl4XLqCA==|O81Fsywakb01cN0xtQ7zImPxGpEpTV4cuyqH590eGGk=|wDY7woBgzi+SIN96lwp4mX/SGgJfQPEBSGFDcPLzBu8=',
+    collectionIds: [],
+    deletedDate: '2021-10-26T01:54:13.19Z',
+    reprompt: 0,
+    login: LoginData {
+      username: '2.O8XevgKMSSoGCyqH6NSZeg==|Wkk+leGJ518kTp7ptqkh6g==|icByfPF/dQk2PbUt3f6hFJSYaSi41sJU/qxcJaQAm/o=',
+      password: '2.W2TIcMAA+pqJFzdulFbWOw==|x7KF1EbQwcg6ue0NYO+1Hg==|ahDcXptjrDAUlYY52F2L1fySnCkm4n5KlCiHxg7Dl4A=',
+      passwordRevisionDate: null,
+      totp: '2.9qoNIc3ryYCaBPM1oRriag==|Vj+YRjY5ob9i0F6Lr50Mqmk6k6uaE/NzmH1+/OUt0Sw=|iURa+Bbd0lzA7lAx8looTryHGzo6CzZHfu6n1qDVjlE=',
+      autofillOnPageLoad: null,
+      uris: []
+    }
+  },
+  '1f2f7534-37a9-42db-b3b6-adb60179199f': CipherData {
+    id: '1f2f7534-37a9-42db-b3b6-adb60179199f',
+    organizationId: null,
+    folderId: null,
+    userId: '14d4a0bc-763c-436f-8e28-adb6014610f8',
+    edit: true,
+    viewPassword: true,
+    organizationUseTotp: false,
+    favorite: false,
+    revisionDate: '2021-10-03T22:52:58.7633333Z',
+    type: 1,
+    name: '2.3i+ArrUzpqWkA9rZaIthfQ==|B9R+6b+rvOrhTACmV+9AbA==|/tqNKb9TQH4PgV0C9FuKW4KVct5/nKQupuA8Pf+F0oI=',
+    notes: '2.wTwxTsXZIxwDsyYOGAh6Vg==|6nbyUSJxeq4EwfOJDUjcCNvryWB9EMFhyX9ojXeWbog=|gp8AY7jqKWxV36IK2UgI+hGPLdw59g/LPssmBG5h4UY=',
+    collectionIds: [],
+    deletedDate: null,
+    reprompt: 0,
+    login: LoginData {
+      username: '2.YMDLYz+v1bCt0UHAdWdeEg==|mrsqrx2tpTIP3JdmRhp0IQ==|1op/8sdcvFuCISRllJD5ldysub6co9Rn+hTHDAIHagA=',
+      password: '2.AEqjnCZm+l0znHKPtaN0Jw==|4DKf9M2NCUQPTaArOvOWRQ==|Xrx37rw+eEje22HqeBvSdfuCeHZUG0Du/znmRhnTHho=',
+      passwordRevisionDate: null,
+      totp: '2.IcpcxLct30d/TZV/qeqM+Q==|LUPw6FRpPCxH16nZhfQeWQmLsEjv8N1rNBP4rfccqwc=|Pvf5qv8Z7K7o3FLydxnnPdwIMxWJr20J18LcNKUgaqs=',
+      autofillOnPageLoad: null,
+      uris: []
+    }
+  },
+  'f259bb34-72b1-4032-9ad0-adb60178e648': CipherData {
+    id: 'f259bb34-72b1-4032-9ad0-adb60178e648',
+    organizationId: null,
+    folderId: null,
+    userId: '14d4a0bc-763c-436f-8e28-adb6014610f8',
+    edit: true,
+    viewPassword: true,
+    organizationUseTotp: false,
+    favorite: false,
+    revisionDate: '2021-10-03T22:52:14.9533333Z',
+    type: 1,
+    name: '2.jAYz8dhSGF6b4goCNp+fJA==|60TEwR17LVuEoGLelWfPYA==|+n6mzvhUwKM86Nh5Z222P4LZYK4XCji5+jP4jjkvsMo=',
+    notes: '2.ozH60bsxKaNKXmT41BLxjQ==|N9Gr5vT2g7UvPEh2jWo8K6+jtmuOZaUApuZlawk+T8A=|NFqcpc+3rfsGKIxikmI3FWQGfnoEllhvg53N6pAv1ws=',
+    collectionIds: [],
+    deletedDate: null,
+    reprompt: 0,
+    login: LoginData {
+      username: '2.gPAjuZdMn32v4uMQPoo0XA==|mvazwPAVn8+jhzGKxo/igg==|rmG4nr/pf1j+flrmFK1L/SeRH7+rJUOIU1ilywb3a8k=',
+      password: '2.LeaxTrjeeIZIFBK/f03Nfw==|Vb/f9QNmVK7pdOWEPzJKgw==|h8knNixAraN/4jSyN04gf0ZJT/j+0GH7fcOw81PqSxs=',
+      passwordRevisionDate: null,
+      totp: '2.6102qzrIqXXlVx5U40N52g==|iQkNEdaeXKiP15+4oKAgkETVKAug+QbkoQGCUJgfzo8=|XX9lVtjOltWz0ZBKdLNP5yXygqr2Wml7fOfNj1ofrew=',
+      autofillOnPageLoad: null,
+      uris: []
+    }
+  },
+  'd1ee61d8-321a-4f9f-9688-adb6014b6916': CipherData {
+    id: 'd1ee61d8-321a-4f9f-9688-adb6014b6916',
+    organizationId: null,
+    folderId: null,
+    userId: '14d4a0bc-763c-436f-8e28-adb6014610f8',
+    edit: true,
+    viewPassword: true,
+    organizationUseTotp: false,
+    favorite: false,
+    revisionDate: '2021-10-03T20:06:37.72Z',
+    type: 1,
+    name: '2.XZz6ZTa3N/ugg1fNc+zhwQ==|owoR1HM30+33Em2oJD2cnw==|KcWwDfhDpqMF6LKXp2qY4B4YUKKswTnIQndae0CDYv8=',
+    notes: '2.s78zd5CjwYb2Pg0keks2ow==|zjpOCgeyEiZmUeMLX0FYUIxpulxpIhu0z/Umx5dUo/U=|KkhTg8pTb98QO+E0UdU/FivHe7ln0UMHYrbNWHrz8rY=',
+    collectionIds: [],
+    deletedDate: null,
+    reprompt: 0,
+    login: LoginData {
+      username: '2.qn/9SeDtS4+3in631VgFhg==|tqGvgyNgnCPN1p/g42vr0w==|o5yR7GILriPRhbIOKGrimqaWTiBUCC09Vs5GC/kxuJs=',
+      password: '2.US0Qp3LBTCrdL04Ho6VGrw==|zds4jniTI5AsXp24754OTw==|zztzQH/4MeWTDRBpcQwhWgMiEMT3JFlfL5o2W93UXxg=',
+      passwordRevisionDate: null,
+      totp: '2.AxDD5/2chKr/ouLnwwknvw==|+rO+GwV9ooRsoFFD3Er9FOOLNmAxJuPQ/gmXlnz7Adk=|vj402h+8+K+atoldckS41plzGxUU4HbHeP2ggK9lCFU=',
+      autofillOnPageLoad: null,
+      uris: []
+    }
+  },
+  '9b49b9d7-5111-4a0e-a579-adcd002db7bd': CipherData {
+    id: '9b49b9d7-5111-4a0e-a579-adcd002db7bd',
+    organizationId: null,
+    folderId: null,
+    userId: '14d4a0bc-763c-436f-8e28-adb6014610f8',
+    edit: true,
+    viewPassword: true,
+    organizationUseTotp: false,
+    favorite: false,
+    revisionDate: '2021-10-26T15:48:53.9233333Z',
+    type: 1,
+    name: '2.wFeO3uDHSq1Vt6cHE+4vHQ==|i3C3eWewMIGuyYZaPSH53Q==|1jLeP6BJOfx45s8Q7/f7WpRb6vfrG78zt3rk94C7/hk=',
+    notes: '2.0K2m9szJoMm61lAwtPzc/A==|gy+BS4OZ59PujfmJz4xkrtcTRzwNuyAwlZALzzAYv/k=|zOFDI183vpYD0LwpZWG6adg4ZkNWpFcZmF4uEXjBGq8=',
+    collectionIds: [],
+    deletedDate: '2021-10-26T15:48:53.92Z',
+    reprompt: 0,
+    login: LoginData {
+      username: '2.Je9xD3eDkxM1gGgwfDYodQ==|1+mAXGQV/B+gq0mZ7nuzkg==|dtJPiNIy40jDM+vTDnOOkEXdABDXVQT1qzJVthT9UTc=',
+      password: '2.hemoT7M1xMJ5wHsX2hZgzw==|klKl5wpEIokLJQd2um7A0g==|KGWIIALqRWmP6lpnDhK+u18l7FjgjNuw45iOU3oCPGk=',
+      passwordRevisionDate: null,
+      totp: '2.6U85RMvgyROU5yb06nPoCA==|dj/mP0vF6gi8veX59rCKOJFG6UII9IIdECqQn4oLvis=|aBwdVhQnnvxJ7YOnRy4e9HNekUzpRvV8LPucXgAcErE=',
+      autofillOnPageLoad: null,
+      uris: []
+    }
+  },
+  '76d10e02-9d1d-4b0d-93b8-adcd010614d8': CipherData {
+    id: '76d10e02-9d1d-4b0d-93b8-adcd010614d8',
+    organizationId: null,
+    folderId: null,
+    userId: '14d4a0bc-763c-436f-8e28-adb6014610f8',
+    edit: true,
+    viewPassword: true,
+    organizationUseTotp: false,
+    favorite: false,
+    revisionDate: '2021-10-26T15:54:12.55Z',
+    type: 1,
+    name: '2.TqpbnpaCggzKs1jUzOF+dw==|5Amv6ZvO8sNEqoksu6RkxA==|KAYRvO4XdieK9L7kG2aFyQc+wJL+n6LWrE/bOcVlmNg=',
+    notes: '2.EfV3jnN1cKuh8YRcvRN2ag==|CCI6yTbZXLLbnwVkzgTjI+GiB0eUIINGx+/Oi11sRz4=|DImuLK9AZvo+R6Myt1msQEO3FIrFeH9C7/DLKGBhdXo=',
+    collectionIds: [],
+    deletedDate: null,
+    reprompt: 0,
+    login: LoginData {
+      username: '2./xdF8MQ5j38o/trh0c1yNw==|gyrLh9VERJIEmd3dvAnmNg==|B1UTFp7jIEz5SNt7k11FFIDg4Xtx1lUh8vFKd5LZgc0=',
+      password: '2.8E+gjLUTCOKmiV3ND3cPxQ==|7oW+GUZPpMBRTsHNDZvohA==|dNZyYcljeeNshOrsb/INi6YLuSQpWAF6K3OtorPxgu8=',
+      passwordRevisionDate: null,
+      totp: '2.mZdbpvfApFfvLVqFtPzIvg==|6YYvXVzVgO5F+5+3j95oJzVlegMVM2tm4SamHx5gmq0=|/s4K79zdzjdqg9O1pXOE0x9kCdmLqKoE8ohjLh8IH2Q=',
+      autofillOnPageLoad: null,
+      uris: []
+    }
+  },
+  'a9a9f214-4879-4583-bf33-adcd010623f5': CipherData {
+    id: 'a9a9f214-4879-4583-bf33-adcd010623f5',
+    organizationId: null,
+    folderId: null,
+    userId: '14d4a0bc-763c-436f-8e28-adb6014610f8',
+    edit: true,
+    viewPassword: true,
+    organizationUseTotp: false,
+    favorite: false,
+    revisionDate: '2021-10-26T15:54:25.45Z',
+    type: 1,
+    name: '2.lRFCjbROt/VeKnA2hV65AQ==|+rDg6dzTgqZ2jIsYTb0z9A==|dfvzHNi8vPzprDsaSNLK6GDA6jTpWrSYf6DizaxZFdo=',
+    notes: '2.DiCkWbcuj0JuWYh26rPrzQ==|na4FV7UjO4XRuCaOwn53zVSEwAHlbg46j/6dgdnmaVU=|Sksy2Vj3GGmh3IqpfQP4wQ6jYs1XocQytQj4oN/k8hE=',
+    collectionIds: [],
+    deletedDate: null,
+    reprompt: 0,
+    login: LoginData {
+      username: '2.cEiItaUF7ucd0+excjvZ0Q==|fPsUQXxZw6h2IOn0rUR1XQ==|98E8cU7Py4yYc17VM7NMGyAWpLJAWWR2hmW1NoUcvu8=',
+      password: '2.xQwjokrPKSGdJsIQz90+MA==|BwzHi7gFwfQmXQ2zWr15Tg==|2VYl9TiqTRskum/EUsDIjQ2mHsKkrNKljJxrAt5FSRM=',
+      passwordRevisionDate: null,
+      totp: '2.Ye6DyJUq43+3zJfQUyrECA==|51HrfMBsRCXVrTpAakc9xo3kU7diBxM2kYQtOgDoW58=|l/+p8yvinmhfOFkcBomFM1MgD1FBLa1WMePxcwryg3I=',
+      autofillOnPageLoad: null,
+      uris: []
+    }
+  }
+}
+Successfully wrote sends_14d4a0bc-763c-436f-8e28-adb6014610f8 to db & value:  {}
+Successfully wrote settings_14d4a0bc-763c-436f-8e28-adb6014610f8 to db & value:  { equivalentDomains: [] }
+Successfully wrote policies_14d4a0bc-763c-436f-8e28-adb6014610f8 to db & value:  {}
+Successfully wrote lastSync_14d4a0bc-763c-436f-8e28-adb6014610f8 to db & value:  2021-10-31T22:55:30.812Z
+res:  MessageResponse {
+  noColor: false,
+  object: 'message',
+  title: 'You are logged in!',
+  message: '\n' +
+    'To unlock your vault, set your session key to the `BW_SESSION` environment variable. ex:\n' +
+    '$ export BW_SESSION="+0gzXP3h4QeB2/9xW/gLw9lDVfi3Aq7plKI9xJJD7TkHBIUL4l7F/AJ43S7YssPjri1AGBtKLzgKRTWiWK8fFw=="\n' +
+    '> $env:BW_SESSION="+0gzXP3h4QeB2/9xW/gLw9lDVfi3Aq7plKI9xJJD7TkHBIUL4l7F/AJ43S7YssPjri1AGBtKLzgKRTWiWK8fFw=="\n' +
+    '\n' +
+    'You can also pass the session key to any command with the `--session` option. ex:\n' +
+    '$ bw list items --session +0gzXP3h4QeB2/9xW/gLw9lDVfi3Aq7plKI9xJJD7TkHBIUL4l7F/AJ43S7YssPjri1AGBtKLzgKRTWiWK8fFw==',
+  raw: '+0gzXP3h4QeB2/9xW/gLw9lDVfi3Aq7plKI9xJJD7TkHBIUL4l7F/AJ43S7YssPjri1AGBtKLzgKRTWiWK8fFw=='
+}
+You are logged in!
+
+To unlock your vault, set your session key to the `BW_SESSION` environment variable. ex:
+$ export BW_SESSION="+0gzXP3h4QeB2/9xW/gLw9lDVfi3Aq7plKI9xJJD7TkHBIUL4l7F/AJ43S7YssPjri1AGBtKLzgKRTWiWK8fFw=="
+> $env:BW_SESSION="+0gzXP3h4QeB2/9xW/gLw9lDVfi3Aq7plKI9xJJD7TkHBIUL4l7F/AJ43S7YssPjri1AGBtKLzgKRTWiWK8fFw=="
+
+You can also pass the session key to any command with the `--session` option. ex:
+$ bw list items --session +0gzXP3h4QeB2/9xW/gLw9lDVfi3Aq7plKI9xJJD7TkHBIUL4l7F/AJ43S7YssPjri1AGBtKLzgKRTWiWK8fFw==

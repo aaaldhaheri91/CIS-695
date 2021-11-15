@@ -1,0 +1,288 @@
+=========================================
+email:  undefined
+password:  undefined
+options:  {}
+
+ ==========================================
+
+? Email address: aaldhahe@umich.edu
+? Master password: [hidden]
+inside else statement, password:  Cis_695_testing email:  aaldhahe@umich.edu
+
+
+-------------------------------------------------------------------
+
+Crypto Service makeKey
+password: Cis_695_testing, salt: aaldhahe@umich.edu, kdf:  0  kdfIterations 100000
+going to call pbkdf2
+key:  ArrayBuffer {
+  [Uint8Contents]: <c2 5c 46 85 fa c9 cc c4 7d a2 95 af d1 fa a8 02 93 58 73 fe 51 a4 0a f7 bd 55 f4 33 87 61 7f c7>,
+  byteLength: 32
+}
+
+----------------------------------------------------------------------
+
+---------------------------------------------------------
+ Auth.Service (logIn)
+key:  SymmetricCryptoKey {
+  key: ArrayBuffer {
+    [Uint8Contents]: <c2 5c 46 85 fa c9 cc c4 7d a2 95 af d1 fa a8 02 93 58 73 fe 51 a4 0a f7 bd 55 f4 33 87 61 7f c7>,
+    byteLength: 32
+  },
+  encType: 0,
+  encKey: ArrayBuffer {
+    [Uint8Contents]: <c2 5c 46 85 fa c9 cc c4 7d a2 95 af d1 fa a8 02 93 58 73 fe 51 a4 0a f7 bd 55 f4 33 87 61 7f c7>,
+    byteLength: 32
+  },
+  macKey: null,
+  keyB64: 'wlxGhfrJzMR9opWv0fqoApNYc/5RpAr3vVX0M4dhf8c=',
+  encKeyB64: 'wlxGhfrJzMR9opWv0fqoApNYc/5RpAr3vVX0M4dhf8c='
+}
+hashedPassword:  8ieCch0DKSJ/YYLt4F458ClboFStMcufdqFsnB07paU=
+localHashedPassword:  q1fyPCADGO19Uyuoc9GOAqy2XY2tUcbZ1q/Zl1ehLWU=
+
+
+=================================================
+loginHelper first
+result before token service:  AuthResult {
+  twoFactor: false,
+  captchaSiteKey: undefined,
+  resetMasterPassword: false,
+  twoFactorProviders: null
+}
+before setCryptoKeys if statement
+this.setCryptoKeys if statement inside
+storeKey: Keys:  {
+  key: 'key',
+  encOrgKeys: 'encOrgKeys',
+  encProviderKeys: 'encProviderKeys',
+  encPrivateKey: 'encPrivateKey',
+  encKey: 'encKey',
+  keyHash: 'keyHash'
+}
+key:  SymmetricCryptoKey {
+  key: ArrayBuffer {
+    [Uint8Contents]: <c2 5c 46 85 fa c9 cc c4 7d a2 95 af d1 fa a8 02 93 58 73 fe 51 a4 0a f7 bd 55 f4 33 87 61 7f c7>,
+    byteLength: 32
+  },
+  encType: 0,
+  encKey: ArrayBuffer {
+    [Uint8Contents]: <c2 5c 46 85 fa c9 cc c4 7d a2 95 af d1 fa a8 02 93 58 73 fe 51 a4 0a f7 bd 55 f4 33 87 61 7f c7>,
+    byteLength: 32
+  },
+  macKey: null,
+  keyB64: 'wlxGhfrJzMR9opWv0fqoApNYc/5RpAr3vVX0M4dhf8c=',
+  encKeyB64: 'wlxGhfrJzMR9opWv0fqoApNYc/5RpAr3vVX0M4dhf8c='
+}
+Crypto Service (ecryptToBytes), plainValue:  ArrayBuffer {
+  [Uint8Contents]: <c2 5c 46 85 fa c9 cc c4 7d a2 95 af d1 fa a8 02 93 58 73 fe 51 a4 0a f7 bd 55 f4 33 87 61 7f c7>,
+  byteLength: 32
+}  key:  SymmetricCryptoKey {
+  key: ArrayBuffer {
+    [Uint8Contents]: <9f 1d 52 61 63 02 38 7f 69 64 5b 5c 21 16 45 df 70 f6 6a c6 04 d5 a7 d4 91 58 0e ae 6c ad ed 05 b0 f2 e3 3a 43 e3 c7 45 6e 22 3b c8 67 0f b2 eb cf fe 10 6f 57 e5 ea 31 ed 8a 92 41 0e 6d b4 f6>,
+    byteLength: 64
+  },
+  encType: 2,
+  encKey: ArrayBuffer {
+    [Uint8Contents]: <9f 1d 52 61 63 02 38 7f 69 64 5b 5c 21 16 45 df 70 f6 6a c6 04 d5 a7 d4 91 58 0e ae 6c ad ed 05>,
+    byteLength: 32
+  },
+  macKey: ArrayBuffer {
+    [Uint8Contents]: <b0 f2 e3 3a 43 e3 c7 45 6e 22 3b c8 67 0f b2 eb cf fe 10 6f 57 e5 ea 31 ed 8a 92 41 0e 6d b4 f6>,
+    byteLength: 32
+  },
+  keyB64: 'nx1SYWMCOH9pZFtcIRZF33D2asYE1afUkVgOrmyt7QWw8uM6Q+PHRW4iO8hnD7Lrz/4Qb1fl6jHtipJBDm209g==',
+  encKeyB64: 'nx1SYWMCOH9pZFtcIRZF33D2asYE1afUkVgOrmyt7QU=',
+  macKeyB64: 'sPLjOkPjx0VuIjvIZw+y68/+EG9X5eox7YqSQQ5ttPY='
+}
+
+
+ Crypto Service: getKeyforEncryption key:  SymmetricCryptoKey {
+  key: ArrayBuffer {
+    [Uint8Contents]: <9f 1d 52 61 63 02 38 7f 69 64 5b 5c 21 16 45 df 70 f6 6a c6 04 d5 a7 d4 91 58 0e ae 6c ad ed 05 b0 f2 e3 3a 43 e3 c7 45 6e 22 3b c8 67 0f b2 eb cf fe 10 6f 57 e5 ea 31 ed 8a 92 41 0e 6d b4 f6>,
+    byteLength: 64
+  },
+  encType: 2,
+  encKey: ArrayBuffer {
+    [Uint8Contents]: <9f 1d 52 61 63 02 38 7f 69 64 5b 5c 21 16 45 df 70 f6 6a c6 04 d5 a7 d4 91 58 0e ae 6c ad ed 05>,
+    byteLength: 32
+  },
+  macKey: ArrayBuffer {
+    [Uint8Contents]: <b0 f2 e3 3a 43 e3 c7 45 6e 22 3b c8 67 0f b2 eb cf fe 10 6f 57 e5 ea 31 ed 8a 92 41 0e 6d b4 f6>,
+    byteLength: 32
+  },
+  keyB64: 'nx1SYWMCOH9pZFtcIRZF33D2asYE1afUkVgOrmyt7QWw8uM6Q+PHRW4iO8hnD7Lrz/4Qb1fl6jHtipJBDm209g==',
+  encKeyB64: 'nx1SYWMCOH9pZFtcIRZF33D2asYE1afUkVgOrmyt7QU=',
+  macKeyB64: 'sPLjOkPjx0VuIjvIZw+y68/+EG9X5eox7YqSQQ5ttPY='
+}
+after setKey & setKeyHash
+tokenResponse.privateKey:  IdentityTokenResponse {
+  response: {
+    access_token: 'eyJhbGciOiJSUzI1NiIsImtpZCI6IkJDMzZDMjE0REI0OEYyMzVCNzdEQTNGMTcyMEMxQTM1QTk2MkVBNDNSUzI1NiIsInR5cCI6ImF0K2p3dCIsIng1dCI6InZEYkNGTnRJOGpXM2ZhUHhjZ3dhTmFsaTZrTSJ9.eyJuYmYiOjE2MzU3MjY3MzQsImV4cCI6MTYzNTczMDMzNCwiaXNzIjoiaHR0cHM6Ly9pZGVudGl0eS5iaXR3YXJkZW4uY29tIiwiY2xpZW50X2lkIjoiY2xpIiwic3ViIjoiMTRkNGEwYmMtNzYzYy00MzZmLThlMjgtYWRiNjAxNDYxMGY4IiwiYXV0aF90aW1lIjoxNjM1NzI2NzM0LCJpZHAiOiJiaXR3YXJkZW4iLCJwcmVtaXVtIjpmYWxzZSwiZW1haWwiOiJhYWxkaGFoZUB1bWljaC5lZHUiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwic3N0YW1wIjoiYjE0YjFhMDEtZmU0MC00M2RlLTllZWQtYmU5Yjg5MWU3MGNkIiwibmFtZSI6IkFobWVkIEFiZHVsc2FsYW0gQWxkaGFoZXJpIiwiZGV2aWNlIjoiMjk4NjAzNjMtOWU4Ni00NWUyLWJjY2MtOTVlZjkwY2IxZjg5IiwianRpIjoiREY1ODQ4Nzg2NTczMEY5RDY5MTZGMzQ1NDc1Qzg5QTIiLCJpYXQiOjE2MzU3MjY3MzQsInNjb3BlIjpbImFwaSIsIm9mZmxpbmVfYWNjZXNzIl0sImFtciI6WyJBcHBsaWNhdGlvbiJdfQ.kCUBcCScrSpHROGEwRSdDbtFvjmBCTD7kMPb1YAZhDt7UzJDkKYUxoajz_LxM3vtZnXZOADGM2mxwJITsxxad1nLcYJmWxwjhBjVrEPTjkyPKD872GnfKNW1Iki0XXzdrFsUu1jo1nNeYMbDSd1cWcJTaUJW2cZNb5Dp67dTNdNJa8hQqqP8W5bEjPBh-A92ha29-CajT6FobG3gbLfh6ab0gzabeWFYXLMvwrr3QN6n5ZWyxb4TZ2UHH-s6HV_4wnvz8cnetyJfwLW2l5ale7DX5eG9li7nP6XX7JH7miSzsvad9pfshkflrPcnBHpAk9P_k9hQgzevTY6qmrTl_fn2-a1ahe0wyOVuC8GWM78fWAF-e7_uXpegcz1xcEQ2n9vcxOns3LsuPiJOe97mtyzmf25YErRrh2pV0Z-kK3EyjdxemO7hstigG72FF9rb1UBCOtqogaCRT4DhND-U8gbvnZL_8cYLiIW6Isr9Nk8rJwM-V4Gbzy-MrdLuGtq5IIOrYB7WAanwh43t3Dhx_6iaZFN7QSiDuBY-VdTr4cL4WDw5n7Vm_h5rJ3kaOmB-qwTtekIzhuP8jKqs06qBkGjY0mvLW2eDwJoGXlkyRMPMUdCSoSJc26OPjdZU6Ych99Y_etWwRrGbJWH5cJuoB0PFo4iDPNJQqvEFVqeV988',
+    expires_in: 3600,
+    token_type: 'Bearer',
+    refresh_token: '04D23349B4217991AF0D1FDCEE9DE8DFA7AE99E933080ABC78228BD502115FAF',
+    scope: 'api offline_access',
+    PrivateKey: '2.PRPynyMwuLHhEpyAdoAnnQ==|6c7mDSD+vU7pXk93RDiv4brNNqhqldZCMG2vaFYXK4c9XYr8Gi9FWD9jjW/UzBuH8n+h1PzGfhOaEiJcfBFI9jXNoixSBV09MPXT8Y4By3CAcAveEDYCmnZPeKqh3LhsTmxjJ+GCC5QPJVwkzmzeuW0p67kbszgkMd9SFZ4mazBy35nu1c/Z2MN50QhZSiWiaM7hDEd0xfwDnjq9/hcFydciqUTs/7dDvgTujG8Liq7wQGnBzpF+xbnn43U2f3NLohqj5ugUdfUsOh1g2lwdR6ibku/vJsuQCJphAvCUB0Uetmyax0Da3f98vf61XyFEfND4E0CR0/H028mkxhhpXLKx7n3sBu0xViHxTEaMPe52AwaxgpTmzZMayYOPFNkZB068iNoI2nNJbkCZk8z4WTg7I90Eis8U5qsnbibraO9MP4ghVcA93fgy+gq3PpyCzTLdVxgG1CraUmeNaovGDZQXeGga5T2ztaG7hpkeP/YinNo5B3gfv2iZSufN1CdcG9khuzpAab/r3VNR6tHGHgmt6ku8fJNeTC64+3oUg8DXV6EOgYmv5+K8Z4UZgIBKZWuDHecN4IuKBLNSCcR3JP4nu8d84EwZt53csCo6RB3fvgVa7ruhz1RckHzBYmwI+fX9aexn1DmNbAQt7/AFZRg1SArJnOeGX5EjNwmRkK1uil/RUzUDQOtoOfF5Ob2CQI3xZFs2PuDu4CdBAMFvyEfWiWonYyso1Acmqheepcl73zDe4v3GM09WyRzZu/yAC2wSTAzIMEMlDi8cB9wTcgdg1AwD/NMbH4Et3y80X3f67bBmKeBBZ7EqSFvWEV4JV1GcAboIHFQuErgKnr604ss0L2fJShqSwIHSlBoPKo2lvC9r8GFPuWCL31xB4MPaqOA86V91J+01bXFA2SZFJbQ3lROeCfhdi3t23r7HtYuUXN/HuF43PVlm2FuAQ9BkCKm4mf841nwDcdhH0HUC3q26PBFI7lna2F9xmaAYie2HEf82Tfm2ekh97FPjCh08Tw+JR/1hUkmv7Qm9thM0xv1o+b0T7lqPzDvMRPNoQjUdwXCxUapMGofUgAPJdLXuQrjSVShNu7B//Ylo7TK72voD7Sub9icnJrl6Tj0dXSYVFcEj/b1nSYLaOUgRVSOv0vzgUbCfoynBQHMdmr3v2fb9bhQhR2i2VAFfydczBeBKDT4FMQxnOrpKaatwLP7hOc8JOY/Ry8y2e1ZIpYpjgQcrcEv1xjS2pqz/G/b1MzBvvG7EfgQaVB7mSq5Tum1pwI/DjO8ST9ZEicYzd9UUftKYK27z5USz8lo+P3oXDuErotDYahuiwWmvZxNZXnmhay0gMXEJZ+BNHkr4QRWWLVk04z1b+A9Vf8CkdZP2B2YUzToJekVRNyn7vXYitjJrU6SK2VjzX7xW6vdiPGNlNJ/dI3MNGgQB8Absk2Jvdov/YE6q0P15wH6Bj0YtEKR03hO5RPnUVjLW6npqfuLlucpasDFMONFp0qSO/Jd/MLQd2B/EEGfqYLsoGlCCyAe0qMplWxemBOyd/GVSiOkQ0SB9Kzcsl57Dhm6CGEQPop5OV0PxyXArA0M+iTdeOWX6rycPa2DKMRWqJg4QEd8LJbj9pZ5870GYCwU7pRxZJkM=|j50YzCfHhLm/y38TX69iSMkURwcD2nhfTwc8s/vIhVQ=',
+    Key: '2.LGNQzSqPRoQgj4luZkP+tQ==|KPeSq7aINKM7DPjeBAy768vfl0d7Q84+P9XqK6vWCSE0Yun+2dgv5IjmEjlXnaqemJdl5ymMVtOJSXCOWdsGhY6SkSubx+b8uF49jqFv6+s=|KZGWdSfD4wOay6830S2kReti1kpzsVhn1+UIWwEEMYk=',
+    ForcePasswordReset: false,
+    ResetMasterPassword: false,
+    Kdf: 0,
+    KdfIterations: 100000
+  },
+  accessToken: 'eyJhbGciOiJSUzI1NiIsImtpZCI6IkJDMzZDMjE0REI0OEYyMzVCNzdEQTNGMTcyMEMxQTM1QTk2MkVBNDNSUzI1NiIsInR5cCI6ImF0K2p3dCIsIng1dCI6InZEYkNGTnRJOGpXM2ZhUHhjZ3dhTmFsaTZrTSJ9.eyJuYmYiOjE2MzU3MjY3MzQsImV4cCI6MTYzNTczMDMzNCwiaXNzIjoiaHR0cHM6Ly9pZGVudGl0eS5iaXR3YXJkZW4uY29tIiwiY2xpZW50X2lkIjoiY2xpIiwic3ViIjoiMTRkNGEwYmMtNzYzYy00MzZmLThlMjgtYWRiNjAxNDYxMGY4IiwiYXV0aF90aW1lIjoxNjM1NzI2NzM0LCJpZHAiOiJiaXR3YXJkZW4iLCJwcmVtaXVtIjpmYWxzZSwiZW1haWwiOiJhYWxkaGFoZUB1bWljaC5lZHUiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwic3N0YW1wIjoiYjE0YjFhMDEtZmU0MC00M2RlLTllZWQtYmU5Yjg5MWU3MGNkIiwibmFtZSI6IkFobWVkIEFiZHVsc2FsYW0gQWxkaGFoZXJpIiwiZGV2aWNlIjoiMjk4NjAzNjMtOWU4Ni00NWUyLWJjY2MtOTVlZjkwY2IxZjg5IiwianRpIjoiREY1ODQ4Nzg2NTczMEY5RDY5MTZGMzQ1NDc1Qzg5QTIiLCJpYXQiOjE2MzU3MjY3MzQsInNjb3BlIjpbImFwaSIsIm9mZmxpbmVfYWNjZXNzIl0sImFtciI6WyJBcHBsaWNhdGlvbiJdfQ.kCUBcCScrSpHROGEwRSdDbtFvjmBCTD7kMPb1YAZhDt7UzJDkKYUxoajz_LxM3vtZnXZOADGM2mxwJITsxxad1nLcYJmWxwjhBjVrEPTjkyPKD872GnfKNW1Iki0XXzdrFsUu1jo1nNeYMbDSd1cWcJTaUJW2cZNb5Dp67dTNdNJa8hQqqP8W5bEjPBh-A92ha29-CajT6FobG3gbLfh6ab0gzabeWFYXLMvwrr3QN6n5ZWyxb4TZ2UHH-s6HV_4wnvz8cnetyJfwLW2l5ale7DX5eG9li7nP6XX7JH7miSzsvad9pfshkflrPcnBHpAk9P_k9hQgzevTY6qmrTl_fn2-a1ahe0wyOVuC8GWM78fWAF-e7_uXpegcz1xcEQ2n9vcxOns3LsuPiJOe97mtyzmf25YErRrh2pV0Z-kK3EyjdxemO7hstigG72FF9rb1UBCOtqogaCRT4DhND-U8gbvnZL_8cYLiIW6Isr9Nk8rJwM-V4Gbzy-MrdLuGtq5IIOrYB7WAanwh43t3Dhx_6iaZFN7QSiDuBY-VdTr4cL4WDw5n7Vm_h5rJ3kaOmB-qwTtekIzhuP8jKqs06qBkGjY0mvLW2eDwJoGXlkyRMPMUdCSoSJc26OPjdZU6Ych99Y_etWwRrGbJWH5cJuoB0PFo4iDPNJQqvEFVqeV988',
+  expiresIn: 3600,
+  refreshToken: '04D23349B4217991AF0D1FDCEE9DE8DFA7AE99E933080ABC78228BD502115FAF',
+  tokenType: 'Bearer',
+  resetMasterPassword: false,
+  privateKey: '2.PRPynyMwuLHhEpyAdoAnnQ==|6c7mDSD+vU7pXk93RDiv4brNNqhqldZCMG2vaFYXK4c9XYr8Gi9FWD9jjW/UzBuH8n+h1PzGfhOaEiJcfBFI9jXNoixSBV09MPXT8Y4By3CAcAveEDYCmnZPeKqh3LhsTmxjJ+GCC5QPJVwkzmzeuW0p67kbszgkMd9SFZ4mazBy35nu1c/Z2MN50QhZSiWiaM7hDEd0xfwDnjq9/hcFydciqUTs/7dDvgTujG8Liq7wQGnBzpF+xbnn43U2f3NLohqj5ugUdfUsOh1g2lwdR6ibku/vJsuQCJphAvCUB0Uetmyax0Da3f98vf61XyFEfND4E0CR0/H028mkxhhpXLKx7n3sBu0xViHxTEaMPe52AwaxgpTmzZMayYOPFNkZB068iNoI2nNJbkCZk8z4WTg7I90Eis8U5qsnbibraO9MP4ghVcA93fgy+gq3PpyCzTLdVxgG1CraUmeNaovGDZQXeGga5T2ztaG7hpkeP/YinNo5B3gfv2iZSufN1CdcG9khuzpAab/r3VNR6tHGHgmt6ku8fJNeTC64+3oUg8DXV6EOgYmv5+K8Z4UZgIBKZWuDHecN4IuKBLNSCcR3JP4nu8d84EwZt53csCo6RB3fvgVa7ruhz1RckHzBYmwI+fX9aexn1DmNbAQt7/AFZRg1SArJnOeGX5EjNwmRkK1uil/RUzUDQOtoOfF5Ob2CQI3xZFs2PuDu4CdBAMFvyEfWiWonYyso1Acmqheepcl73zDe4v3GM09WyRzZu/yAC2wSTAzIMEMlDi8cB9wTcgdg1AwD/NMbH4Et3y80X3f67bBmKeBBZ7EqSFvWEV4JV1GcAboIHFQuErgKnr604ss0L2fJShqSwIHSlBoPKo2lvC9r8GFPuWCL31xB4MPaqOA86V91J+01bXFA2SZFJbQ3lROeCfhdi3t23r7HtYuUXN/HuF43PVlm2FuAQ9BkCKm4mf841nwDcdhH0HUC3q26PBFI7lna2F9xmaAYie2HEf82Tfm2ekh97FPjCh08Tw+JR/1hUkmv7Qm9thM0xv1o+b0T7lqPzDvMRPNoQjUdwXCxUapMGofUgAPJdLXuQrjSVShNu7B//Ylo7TK72voD7Sub9icnJrl6Tj0dXSYVFcEj/b1nSYLaOUgRVSOv0vzgUbCfoynBQHMdmr3v2fb9bhQhR2i2VAFfydczBeBKDT4FMQxnOrpKaatwLP7hOc8JOY/Ry8y2e1ZIpYpjgQcrcEv1xjS2pqz/G/b1MzBvvG7EfgQaVB7mSq5Tum1pwI/DjO8ST9ZEicYzd9UUftKYK27z5USz8lo+P3oXDuErotDYahuiwWmvZxNZXnmhay0gMXEJZ+BNHkr4QRWWLVk04z1b+A9Vf8CkdZP2B2YUzToJekVRNyn7vXYitjJrU6SK2VjzX7xW6vdiPGNlNJ/dI3MNGgQB8Absk2Jvdov/YE6q0P15wH6Bj0YtEKR03hO5RPnUVjLW6npqfuLlucpasDFMONFp0qSO/Jd/MLQd2B/EEGfqYLsoGlCCyAe0qMplWxemBOyd/GVSiOkQ0SB9Kzcsl57Dhm6CGEQPop5OV0PxyXArA0M+iTdeOWX6rycPa2DKMRWqJg4QEd8LJbj9pZ5870GYCwU7pRxZJkM=|j50YzCfHhLm/y38TX69iSMkURwcD2nhfTwc8s/vIhVQ=',
+  key: '2.LGNQzSqPRoQgj4luZkP+tQ==|KPeSq7aINKM7DPjeBAy768vfl0d7Q84+P9XqK6vWCSE0Yun+2dgv5IjmEjlXnaqemJdl5ymMVtOJSXCOWdsGhY6SkSubx+b8uF49jqFv6+s=|KZGWdSfD4wOay6830S2kReti1kpzsVhn1+UIWwEEMYk=',
+  twoFactorToken: undefined,
+  kdf: 0,
+  kdfIterations: 100000
+}
+
+
+============================================================
+loginHelper
+result:  AuthResult {
+  twoFactor: false,
+  captchaSiteKey: undefined,
+  resetMasterPassword: false,
+  twoFactorProviders: null
+}
+after calling this.authService.logIn, response:  AuthResult {
+  twoFactor: false,
+  captchaSiteKey: undefined,
+  resetMasterPassword: false,
+  twoFactorProviders: null
+}
+
+
+
+ inside aesEncrypt!!!
+
+
+
+data:  ArrayBuffer {
+  [Uint8Contents]: <c2 5c 46 85 fa c9 cc c4 7d a2 95 af d1 fa a8 02 93 58 73 fe 51 a4 0a f7 bd 55 f4 33 87 61 7f c7>,
+  byteLength: 32
+}
+iv:  ArrayBuffer {
+  [Uint8Contents]: <36 5f 27 5c 71 bb 84 bf 9c f4 2e 1d ae eb 2f 07>,
+  byteLength: 16
+}
+key:  ArrayBuffer {
+  [Uint8Contents]: <9f 1d 52 61 63 02 38 7f 69 64 5b 5c 21 16 45 df 70 f6 6a c6 04 d5 a7 d4 91 58 0e ae 6c ad ed 05>,
+  byteLength: 32
+}
+cipher:  Cipheriv {
+  _decoder: null,
+  _options: undefined,
+  [Symbol(kHandle)]: CipherBase {}
+}
+encBuf:  <Buffer 3e 18 c4 94 cc f1 b9 9c b1 c1 00 b0 a4 dc 5b bd 42 59 bd a2 9b 3a 1f 9e 32 3c 96 ce ec 55 91 b5 16 1a ab 78 99 1e da d0 b9 e3 bd cc a9 27 fe cd>
+
+-----------------------------------------------------
+Crypto Service (aesEcnrypt): data:  ArrayBuffer {
+  [Uint8Contents]: <c2 5c 46 85 fa c9 cc c4 7d a2 95 af d1 fa a8 02 93 58 73 fe 51 a4 0a f7 bd 55 f4 33 87 61 7f c7>,
+  byteLength: 32
+}
+key:  SymmetricCryptoKey {
+  key: ArrayBuffer {
+    [Uint8Contents]: <9f 1d 52 61 63 02 38 7f 69 64 5b 5c 21 16 45 df 70 f6 6a c6 04 d5 a7 d4 91 58 0e ae 6c ad ed 05 b0 f2 e3 3a 43 e3 c7 45 6e 22 3b c8 67 0f b2 eb cf fe 10 6f 57 e5 ea 31 ed 8a 92 41 0e 6d b4 f6>,
+    byteLength: 64
+  },
+  encType: 2,
+  encKey: ArrayBuffer {
+    [Uint8Contents]: <9f 1d 52 61 63 02 38 7f 69 64 5b 5c 21 16 45 df 70 f6 6a c6 04 d5 a7 d4 91 58 0e ae 6c ad ed 05>,
+    byteLength: 32
+  },
+  macKey: ArrayBuffer {
+    [Uint8Contents]: <b0 f2 e3 3a 43 e3 c7 45 6e 22 3b c8 67 0f b2 eb cf fe 10 6f 57 e5 ea 31 ed 8a 92 41 0e 6d b4 f6>,
+    byteLength: 32
+  },
+  keyB64: 'nx1SYWMCOH9pZFtcIRZF33D2asYE1afUkVgOrmyt7QWw8uM6Q+PHRW4iO8hnD7Lrz/4Qb1fl6jHtipJBDm209g==',
+  encKeyB64: 'nx1SYWMCOH9pZFtcIRZF33D2asYE1afUkVgOrmyt7QU=',
+  macKeyB64: 'sPLjOkPjx0VuIjvIZw+y68/+EG9X5eox7YqSQQ5ttPY='
+}
+encryptedObj:  EncryptedObject {
+  key: SymmetricCryptoKey {
+    key: ArrayBuffer {
+      [Uint8Contents]: <9f 1d 52 61 63 02 38 7f 69 64 5b 5c 21 16 45 df 70 f6 6a c6 04 d5 a7 d4 91 58 0e ae 6c ad ed 05 b0 f2 e3 3a 43 e3 c7 45 6e 22 3b c8 67 0f b2 eb cf fe 10 6f 57 e5 ea 31 ed 8a 92 41 0e 6d b4 f6>,
+      byteLength: 64
+    },
+    encType: 2,
+    encKey: ArrayBuffer {
+      [Uint8Contents]: <9f 1d 52 61 63 02 38 7f 69 64 5b 5c 21 16 45 df 70 f6 6a c6 04 d5 a7 d4 91 58 0e ae 6c ad ed 05>,
+      byteLength: 32
+    },
+    macKey: ArrayBuffer {
+      [Uint8Contents]: <b0 f2 e3 3a 43 e3 c7 45 6e 22 3b c8 67 0f b2 eb cf fe 10 6f 57 e5 ea 31 ed 8a 92 41 0e 6d b4 f6>,
+      byteLength: 32
+    },
+    keyB64: 'nx1SYWMCOH9pZFtcIRZF33D2asYE1afUkVgOrmyt7QWw8uM6Q+PHRW4iO8hnD7Lrz/4Qb1fl6jHtipJBDm209g==',
+    encKeyB64: 'nx1SYWMCOH9pZFtcIRZF33D2asYE1afUkVgOrmyt7QU=',
+    macKeyB64: 'sPLjOkPjx0VuIjvIZw+y68/+EG9X5eox7YqSQQ5ttPY='
+  },
+  iv: ArrayBuffer {
+    [Uint8Contents]: <36 5f 27 5c 71 bb 84 bf 9c f4 2e 1d ae eb 2f 07>,
+    byteLength: 16
+  },
+  data: ArrayBuffer {
+    [Uint8Contents]: <3e 18 c4 94 cc f1 b9 9c b1 c1 00 b0 a4 dc 5b bd 42 59 bd a2 9b 3a 1f 9e 32 3c 96 ce ec 55 91 b5 16 1a ab 78 99 1e da d0 b9 e3 bd cc a9 27 fe cd>,
+    byteLength: 48
+  }
+}
+obj.key:  SymmetricCryptoKey {
+  key: ArrayBuffer {
+    [Uint8Contents]: <9f 1d 52 61 63 02 38 7f 69 64 5b 5c 21 16 45 df 70 f6 6a c6 04 d5 a7 d4 91 58 0e ae 6c ad ed 05 b0 f2 e3 3a 43 e3 c7 45 6e 22 3b c8 67 0f b2 eb cf fe 10 6f 57 e5 ea 31 ed 8a 92 41 0e 6d b4 f6>,
+    byteLength: 64
+  },
+  encType: 2,
+  encKey: ArrayBuffer {
+    [Uint8Contents]: <9f 1d 52 61 63 02 38 7f 69 64 5b 5c 21 16 45 df 70 f6 6a c6 04 d5 a7 d4 91 58 0e ae 6c ad ed 05>,
+    byteLength: 32
+  },
+  macKey: ArrayBuffer {
+    [Uint8Contents]: <b0 f2 e3 3a 43 e3 c7 45 6e 22 3b c8 67 0f b2 eb cf fe 10 6f 57 e5 ea 31 ed 8a 92 41 0e 6d b4 f6>,
+    byteLength: 32
+  },
+  keyB64: 'nx1SYWMCOH9pZFtcIRZF33D2asYE1afUkVgOrmyt7QWw8uM6Q+PHRW4iO8hnD7Lrz/4Qb1fl6jHtipJBDm209g==',
+  encKeyB64: 'nx1SYWMCOH9pZFtcIRZF33D2asYE1afUkVgOrmyt7QU=',
+  macKeyB64: 'sPLjOkPjx0VuIjvIZw+y68/+EG9X5eox7YqSQQ5ttPY='
+}
+obj.iv:  ArrayBuffer {
+  [Uint8Contents]: <36 5f 27 5c 71 bb 84 bf 9c f4 2e 1d ae eb 2f 07>,
+  byteLength: 16
+}
+obj.data:  ArrayBuffer {
+  [Uint8Contents]: <3e 18 c4 94 cc f1 b9 9c b1 c1 00 b0 a4 dc 5b bd 42 59 bd a2 9b 3a 1f 9e 32 3c 96 ce ec 55 91 b5 16 1a ab 78 99 1e da d0 b9 e3 bd cc a9 27 fe cd>,
+  byteLength: 48
+}
+obj.mac:  ArrayBuffer {
+  [Uint8Contents]: <40 df 60 ce 8e 96 f0 98 1e 39 c0 59 0e 2a 0a c6 02 7c a3 9d 22 7a fe cd 53 56 ed 2b d2 52 4a ce>,
+  byteLength: 32
+}
+----------------------------------------------
+res:  MessageResponse {
+  noColor: false,
+  object: 'message',
+  title: 'You are logged in!',
+  message: '\n' +
+    'To unlock your vault, set your session key to the `BW_SESSION` environment variable. ex:\n' +
+    '$ export BW_SESSION="nx1SYWMCOH9pZFtcIRZF33D2asYE1afUkVgOrmyt7QWw8uM6Q+PHRW4iO8hnD7Lrz/4Qb1fl6jHtipJBDm209g=="\n' +
+    '> $env:BW_SESSION="nx1SYWMCOH9pZFtcIRZF33D2asYE1afUkVgOrmyt7QWw8uM6Q+PHRW4iO8hnD7Lrz/4Qb1fl6jHtipJBDm209g=="\n' +
+    '\n' +
+    'You can also pass the session key to any command with the `--session` option. ex:\n' +
+    '$ bw list items --session nx1SYWMCOH9pZFtcIRZF33D2asYE1afUkVgOrmyt7QWw8uM6Q+PHRW4iO8hnD7Lrz/4Qb1fl6jHtipJBDm209g==',
+  raw: 'nx1SYWMCOH9pZFtcIRZF33D2asYE1afUkVgOrmyt7QWw8uM6Q+PHRW4iO8hnD7Lrz/4Qb1fl6jHtipJBDm209g=='
+}
+You are logged in!
+
+To unlock your vault, set your session key to the `BW_SESSION` environment variable. ex:
+$ export BW_SESSION="nx1SYWMCOH9pZFtcIRZF33D2asYE1afUkVgOrmyt7QWw8uM6Q+PHRW4iO8hnD7Lrz/4Qb1fl6jHtipJBDm209g=="
+> $env:BW_SESSION="nx1SYWMCOH9pZFtcIRZF33D2asYE1afUkVgOrmyt7QWw8uM6Q+PHRW4iO8hnD7Lrz/4Qb1fl6jHtipJBDm209g=="
+
+You can also pass the session key to any command with the `--session` option. ex:
+$ bw list items --session nx1SYWMCOH9pZFtcIRZF33D2asYE1afUkVgOrmyt7QWw8uM6Q+PHRW4iO8hnD7Lrz/4Qb1fl6jHtipJBDm209g==
