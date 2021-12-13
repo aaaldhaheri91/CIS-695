@@ -3,12 +3,13 @@ import dirtyjson
 import json 
 # str words = ""
 
-with open('../bitwarden_dump1.txt', 'rb') as f:
-    for line in f:
-        # json_expr = "{"+line.partition("{")[2]
-        # the_dict = json.loads(json_expr)
-        # print (the_dict)
-        print (line)
+# with open('../android_bitwarden_dump.log', 'rb') as f:
+#     for line in f:
+#         print "ahmed"
+#         # json_expr = "{"+line.partition("{")[2]
+#         # the_dict = json.loads(json_expr)
+#         # print (the_dict)
+#         # print (line)
 
 # regex = '{(?:[^{}]|(?R))*}'
 text = '''laksjdflksjdflksjdlfjasldfjas;ldfjsdklfjaslkjdflks{
@@ -177,5 +178,5 @@ FZRg1SArJnOeGX5EjNwmRkK1uil/RUzUDQOtoOfF5Ob2CQI3xZFs2PuDu4CdBAMFvyEfWiWonYyso1Ac
 d1 = json.loads(text2)
 print (d1)
 
-# print (regex.match(r'{(?:[^{}]|(?R))*}', text2))
+print (regex.match(r'{(?:[^{}]|(?R))*}', text2))
 

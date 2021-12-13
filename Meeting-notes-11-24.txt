@@ -1,0 +1,24 @@
+Would be nice to have an html extractor. 
+Search for authy memory forensics (Useful) ---> Its possible
+
+AndOPT ->>>> website (Google) (Start it and generate the tokens)
+
+
+-- Go to App -- 
+Use bit warden for two factor authentication. Bitwarden.
+
+Focus on open source ones
+Bitwarden, CLI - OPT, aegis. ---- These are open source.
+
+//REPORT
+Word Document:
+Screen Shots of data that harvested, explanation, process applied, how you did it. Description of the screen shot. 
+
+Something similar for the two FA -- stick to these three open sources. 
+
+screen shots
+explanation of the process
+explanation of the result
+ 
+
+
