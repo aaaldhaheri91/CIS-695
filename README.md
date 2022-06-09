@@ -1,6 +1,3 @@
-Author: Jake Huneau (huneauja@umich.edu)
-Date: 8/24/21
-
 
 # Extracting AES keys from memory
 
